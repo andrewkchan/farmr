@@ -1,3 +1,3 @@
 ## Plant app
 
-Uber for plant doctors LOLOLOLOLOL.
+Democratizing agronomy knowledge for farmers everywhere
