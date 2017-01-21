@@ -2,7 +2,8 @@ import * as types from "../constants/ActionTypes";
 
 /*
 action addCrop
-
+Adds a new crop to the set of extant crops while creating a new unique ID for it.
+Also sets the current crop to the newly added crop.
 */
 export default function addCrop(crop) {
     return {
@@ -11,3 +12,14 @@ export default function addCrop(crop) {
     };
 }
 
+/*
+action updateCrop
+Updates the specified cropId to the given crop object.
+*/
+export default function updateCrop(cropId, crop) {
+    return {
+        type: types.UPDATE_CROP,
+        cropId,
+        crop
+    };
+}

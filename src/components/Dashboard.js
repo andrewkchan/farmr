@@ -8,6 +8,12 @@ const propTypes = {
     captured: PropTypes.bool.isRequired
 };
 
+const imageStyle = {
+    width: 250,
+    height: 250,
+    marginBottom: 350
+};
+
 class Dashboard extends Component {
     render() {
         const { captured } = this.props;
@@ -27,6 +33,11 @@ class Dashboard extends Component {
                     You have no crops in your circle. :(
                     </Text>
                 </View>
+                <Image
+                    source={require("../images/dirticon.png")}
+                    style={imageStyle}
+                    resizeMode="contain"
+                />
             </View>
         );
     }
