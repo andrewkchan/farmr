@@ -22,7 +22,11 @@ class Dashboard extends Component {
 
         return (
             <View style={{flex: 1}}>
-                <Camera {...this.props} style={{flex:1}} />
+                <View style={{alignSelf: "center", margin: 15}}>
+                    <Text>
+                    You have no crops in your circle. :(
+                    </Text>
+                </View>
             </View>
         );
     }

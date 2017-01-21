@@ -21,7 +21,7 @@ const imageStyle = {
 
 class Splash extends Component {
     componentDidMount() {
-        setTimeout(() => this.nav(), 3000);
+        setTimeout(() => this.nav(), 1000);
     }
 
     nav() {
