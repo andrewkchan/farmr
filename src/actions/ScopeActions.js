@@ -5,3 +5,30 @@ export function capture() {
         type: types.CAPTURE
     };
 }
+
+export function receiveCapturedImage(image) {
+    return (dispatch) => {
+        dispatch(processCapturedImage(image));
+    };
+}
+
+export function processCapturedImage(image) {
+    return (dispatch, getState) => {
+        //do native tensorflow stuff...
+    };
+}
+
+export function fetchDiagnosisSuggestions() {
+    return (dispatch) => {
+        console.log("should be fetching diagnosis right now");
+        //fetch diagnosis either from sqlite DB or internet
+        //get promise.then((suggestions) => { dispatch(receiveDiagnosisSuggestions(suggestions)); });
+    };
+}
+
+export function receiveDiagnosisSuggestions(suggestions) {
+    return {
+        type: types.RECEIVE_DIAGNOSIS_SUGGESTIONS,
+        suggestions
+    };
+}

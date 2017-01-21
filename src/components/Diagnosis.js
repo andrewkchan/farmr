@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TouchableOpacity, Button } from "react-native";
+
 
 const containerStyle = {
     flexDirection: "column",
@@ -21,6 +22,7 @@ class Diagnosis extends Component {
                     
                     <TouchableOpacity>
                         <Button
+                            title = "go_back"
                             onPress ={onButtonPress}
                         />
                       
@@ -35,4 +37,4 @@ class Diagnosis extends Component {
 }
 
 
-export default Disease;
+export default Diagnosis;

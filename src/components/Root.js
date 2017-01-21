@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from "react";
 import { View, Navigator, Text, StatusBar } from "react-native";
 import Splash from "../components/Splash";
 import Dashboard from "../components/Dashboard";
+import Diagnosis from "../components/Diagnosis";
 // import Snaps from "../components/Snaps";
 // import Discover from "../components/Discover";
 //import AddMe from "../components/AddMe";
@@ -98,7 +99,15 @@ class Root extends Component {
                         { ...this.props }
                     />
                 );
-
+            
+             case "diagnosis":
+                return (
+                    <Diagnosis
+                        navigator={navigator}
+                        { ...this.props }
+                    />
+                );
+            
             default:
                 return null;
         }
