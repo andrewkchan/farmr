@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from "react";
-import { View, Text } from "react-native";
+import { View, Text, Button } from "react-native";
 
 import Camera from "../components/Camera";
 import Picture from "../components/Picture";
@@ -15,6 +15,18 @@ const imageStyle = {
 };
 
 class Dashboard extends Component {
+    constructor(props){
+        super(props);
+        this.goToCamera = this.goToCamera.bind(this);
+    }
+    
+    goToCamera() {
+         const { navigator } = this.props;
+        navigator.replace({
+            id: "camera"
+        });
+    }
+    
     render() {
         const { captured } = this.props;
 
@@ -38,6 +50,16 @@ class Dashboard extends Component {
                     style={imageStyle}
                     resizeMode="contain"
                 />
+                <TouchableOpacity
+                    style={{flex: 1}}
+                    onPress={this.goToCamera}
+                >
+                    <Image
+                        source={require("../images/plusIcon.png")}
+                        resizeMode="contain"
+                    />
+                </TouchableOpacity>
+               
             </View>
         );
     }
