@@ -5,7 +5,7 @@ import Camera from "../components/Camera";
 import Picture from "../components/Picture";
 
 const propTypes = {
-    captured: PropTypes.bool.isRequired
+    dispatch: PropTypes.func.isRequired
 };
 
 const imageStyle = {
