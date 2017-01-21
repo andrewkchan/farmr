@@ -9,9 +9,10 @@ const propTypes = {
 };
 
 const imageStyle = {
-    width: 250,
-    height: 250,
-    marginBottom: 350
+    width: 100,
+    height: 100,
+    marginBottom: 350,
+    alignSelf: "center"
 };
 
 class Dashboard extends Component {
@@ -39,7 +40,7 @@ class Dashboard extends Component {
         }
 
         return (
-            <View style={{flex: 1}}>
+            <View style={{flex: 1, flexDirection: "column"}}>
                 <View style={{alignSelf: "center", margin: 15}}>
                     <Text>
                     You have no crops in your circle. :(
