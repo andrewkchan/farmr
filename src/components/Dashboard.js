@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from "react";
-import { View, Text, Button, Image } from "react-native";
+import { View, Text, Button, Image, TouchableOpacity } from "react-native";
 
 import Camera from "../components/Camera";
 import Picture from "../components/Picture";
