@@ -52,7 +52,15 @@ class Root extends Component {
                     <AddMe navigator={navigator} />
                 );
                 */
-
+            
+            case "camera":
+                return (
+                    <Camera
+                        navigator={navigator}
+                        { ...this.props }
+                    />
+                );
+            
             case "dashboard":
                 return (
                     <Dashboard
