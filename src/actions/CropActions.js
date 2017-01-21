@@ -15,6 +15,7 @@ export default function addCrop(crop) {
 /*
 action updateCrop
 Updates the specified cropId to the given crop object.
+If you want to begin examining a crop id, use ScopeActions::examineCrop() instead.
 */
 export default function updateCrop(cropId, crop) {
     return {

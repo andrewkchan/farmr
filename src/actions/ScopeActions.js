@@ -32,3 +32,14 @@ export function receiveDiagnosisSuggestions(suggestions) {
         suggestions
     };
 }
+
+/*
+action examineCrop
+Set the currently examined crop ID to the given cropId.
+*/
+export function examineCrop(cropId) {
+    return {
+        type: types.EXAMINE_CROP,
+        cropId
+    };
+}
