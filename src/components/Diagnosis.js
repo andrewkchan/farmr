@@ -9,7 +9,10 @@ const containerStyle = {
 };
 
 const onButtonPress = () => {
-    
+     const { navigator } = this.props;
+        navigator.replace({
+            id: "dashboard"
+        });
 };
 
 class Diagnosis extends Component {
@@ -22,7 +25,7 @@ class Diagnosis extends Component {
                     
                     <TouchableOpacity>
                         <Button
-                            title = "go_back"
+                            title = "Go Back"
                             onPress ={onButtonPress}
                         />
                       
