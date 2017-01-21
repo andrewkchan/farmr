@@ -52,7 +52,7 @@ class Dashboard extends Component {
                     resizeMode="contain"
                 />
                 <TouchableOpacity
-                    style={{flex: 1}}
+                    style={{flex: 1, alignSelf: "center"}}
                     onPress={this.goToCamera}
                 >
                     <Image

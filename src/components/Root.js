@@ -3,7 +3,7 @@ import { View, Navigator, Text, StatusBar } from "react-native";
 import Splash from "../components/Splash";
 import Dashboard from "../components/Dashboard";
 import Diagnosis from "../components/Diagnosis";
-// import Snaps from "../components/Snaps";
+import Camera from "../components/Camera";
 // import Discover from "../components/Discover";
 //import AddMe from "../components/AddMe";
 // import Chats from "../components/Chats";
