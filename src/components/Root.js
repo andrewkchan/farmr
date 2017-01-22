@@ -30,7 +30,6 @@ class Root extends Component {
         const { dispatch } = this.props;
         //dispatch initialization actions
         dispatch(fetchCropSet());
-        dispatch(loadCropListFromSet());
     }
 
     renderScene(route, navigator) {
