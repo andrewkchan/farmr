@@ -11,6 +11,10 @@ import Picture from "../components/Picture";
 // import Chats from "../components/Chats";
 // import Stories from "../components/Stories";
 
+
+import {fetchCropSet} from "../actions/CropActions";
+import {loadCropListFromSet} from "../actions/CropListActions";
+
 const propTypes = {
     dispatch: PropTypes.func.isRequired
 }
@@ -20,6 +24,12 @@ class Root extends Component {
         super(props);
 
         this.renderScene = this.renderScene.bind(this);
+    }
+    
+    componentDidMount() {
+        //dispatch initialization actions
+        dispatch(fetchCropSet());
+        dispatch(loadCropListFromSet());
     }
 
     renderScene(route, navigator) {
