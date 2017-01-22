@@ -54,20 +54,32 @@ class Dashboard extends Component {
                 </View>
             );
         }
-        return cropIds.map((cropId) => {
-            return (
-                <View style={{flex: 1, flexDirection: "row", alignSelf: "center", margin: 10}}>
-                    <Image
-                        source={require("../images/dirticon.png")}
-                        style={thumbnailStyle}
-                        resizeMode="contain"
-                    />
-                    <Text>
-                    {crops[cropId].name}
-                    </Text>
+        
+        const MAX_ITEMS_PER_ROW = 3;
+        const numRows = Math.floor(cropIds.length / MAX_ITEMS_PER_ROW);
+        const rows = [];
+        for (let i = numRows; i < cropIds.length; i += MAX_ITEMS_PER_ROW) {
+            const cropRow = cropIds.slice(i, i + MAX_ITEMS_PER_ROW).map((cropId) => {
+                return (
+                    <View style={{flex: 1, flexDirection: "column", alignSelf: "center", margin: 10}}>
+                        <Image
+                            source={require("../images/dirticon.png")}
+                            style={thumbnailStyle}
+                            resizeMode="contain"
+                        />
+                        <Text>
+                        {crops[cropId].name}
+                        </Text>
+                    </View>
+                );
+            });
+            rows.push((
+                <View style={{flex: 1, flexDirection: "row"}}>
+                {cropRow}
                 </View>
-            );
-        });
+            ));
+        }
+        return rows;
     }
     
     render() {
