@@ -9,8 +9,8 @@ Also sets the current crop to the newly added crop.
 */
 export default function addCrop(crop) {
     return (dispatch, getState) => {
-        const { crops } = getState();
-        const { crops } = crops;
+        const { entities } = getState();
+        const { crops } = entities;
         let i = 0;
         while (crops[i]) {
             ++i;

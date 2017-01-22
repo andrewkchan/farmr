@@ -2,8 +2,8 @@ import * as types from "../constants/ActionTypes";
 
 export function loadCropListFromSet() {
     return (dispatch, getState) => {
-        const { crops } = getState();
-        const { crops } = crops;
+        const { entities } = getState();
+        const { crops } = entities;
         const cropIds = Arrays.from(crops);
         cropIds.sort((a, b) => {
             if (a.name < b.name) {

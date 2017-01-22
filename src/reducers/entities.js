@@ -4,7 +4,7 @@ const initialState = {
     crops: null //hashmap of crop entities indexed by ID
 };
 
-export default function crops(state = initialState, action) {
+export default function entities(state = initialState, action) {
     switch(action.crops) {
         case types.RECEIVE_CROPSET:
             return { ...state, crops: { ...state.crops, ...action.crops } };

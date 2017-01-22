@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 import * as types from "../constants/ActionTypes";
 import croplist from "../reducers/croplist";
-import crops from "../reducers/crops";
+import entities from "../reducers/entities";
 import scope from "../reducers/scope";
 
 const initialState = {
@@ -11,7 +11,7 @@ const initialState = {
 
 const rootReducer = combineReducers({
     croplist,
-    crops,
+    entities,
     scope
 });
 
