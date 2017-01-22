@@ -6,8 +6,8 @@ import org.tensorflow.demo.TensorFlowImageClassifier;
 public class Guesser{
     public static final String MODEL_FILE = "",
                             LABEL_FILE = "",
-                            INPUT_NAME,
-                            OUTPUT_NAME;
+                            INPUT_NAME = "",
+                            OUTPUT_NAME = "";
     private static final int NUM_CLASSES = 1001;
     private static final int INPUT_SIZE = 224;
     private static final int IMAGE_MEAN = 117;
