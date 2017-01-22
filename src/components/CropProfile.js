@@ -35,6 +35,11 @@ class CropProfile extends Component {
             <View 
                 style={{
                     flex: 1, 
+                    flexDirection: "column"
+                }}>
+                <View
+                    style={{
+                    flex: 1, 
                     flexDirection: "column", 
                     backgroundColor: "#CC8C47",
                     borderColor: '#795126',
@@ -55,6 +60,7 @@ class CropProfile extends Component {
                 <Text style={{alignSelf: "center"}}>
                 { crop.condition.name }
                 </Text>
+                </View>
                 <View style={{flex: 1, flexDirection:'row'}}>
                  <TouchableOpacity  onPress={this.onButtonPress}>
                         <Icon
