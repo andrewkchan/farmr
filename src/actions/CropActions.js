@@ -1,5 +1,7 @@
 import * as types from "../constants/ActionTypes";
 
+import { SAMPLE_CROPSET } from "../constants/CropConstants";
+
 /*
 action addCrop
 Adds a new crop to the set of extant crops while creating a new unique ID for it.
@@ -23,4 +25,10 @@ export default function updateCrop(cropId, crop) {
         cropId,
         crop
     };
+}
+
+export default function fetchCropSet() {
+    return (dispatch) => {
+        dispatch(receiveCropSet(SAMPLE_CROPSET));
+    }
 }

@@ -27,7 +27,7 @@ class CameraTop extends Component {
                     <Icon
                         name="angle-left"
                         size={30}
-                        style={{...iconStyle, marginLeft: 0}}
+                        style={{...iconStyle, marginLeft: 20}}
                         color="#fff"
                     />
                 </TouchableHighlight>
@@ -37,7 +37,7 @@ class CameraTop extends Component {
                     <Icon
                         name="flash"
                         size={30}
-                        style={{...iconStyle, marginRight: 0}}
+                        style={{...iconStyle, marginRight: 20, {transform: translateX(20)}}}
                         color="#fff"
                     />
                 </TouchableHighlight>
