@@ -19,12 +19,20 @@ class CropProfile extends Component {
     constructor(props){
         super(props);
         this.onButtonPress = this.onButtonPress.bind(this);
+        this.goToCamera = this.goToCamera.bind(this);
     }
     
     onButtonPress(){
         const { navigator } = this.props;
         navigator.replace({
         id: "dashboard"
+        });
+    }
+    
+    goToCamera() {
+        const { dispatch, navigator } = this.props;
+        navigator.replace({
+            id: "camera"
         });
     }
     
@@ -69,7 +77,7 @@ class CropProfile extends Component {
                             color="#499E9C"
                         />
                 </TouchableOpacity>
-                <TouchableOpacity >
+                <TouchableOpacity onPress={this.goToCamera}>
                      <Icon
                             name = "camera"
                             size={45}

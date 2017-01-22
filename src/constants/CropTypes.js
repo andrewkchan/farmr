@@ -14,7 +14,7 @@ export default cropTypes = {
                 `
             },
             BLACK_ROT: {
-                name: "Black Rot"
+                name: "Black Rot",
                 suggestion: `Remove any infected parts of the plant/fruits. 
                 These are sources of bacteria that may infect the rest of the plant`
             },
@@ -44,7 +44,7 @@ export default cropTypes = {
         name: "Cherry",
         conditions: {
             POWDERY_MILDEW: {
-                name: "Powdery Mildew"
+                name: "Powdery Mildew",
                 suggestion: `Proactive steps to avoid powdery mildew:
                             Provide adequate air circulation by not crowding plants.
                             Site plants where they will get sufficient light of six hours or more each day. 
@@ -63,7 +63,7 @@ export default cropTypes = {
         name: "Corn",
         conditions: {
             CERCOSPORA_LEAF_SPOT_GRAY_LEAF_SPOT: {
-                name: "Cercospora leaf spots (gray leaf spots)"
+                name: "Cercospora leaf spots (gray leaf spots)",
                 suggestion: `Pruning out heavily infected areas improves the appearance 
                 of affected hydrangeas as well as eliminates many infectious spores. 
                 Gather up fallen leaves and other plant debris around the hydrangea 
@@ -79,6 +79,7 @@ export default cropTypes = {
                             Apply a foliar fungicide if:
                             Rust is spreading rapidly or likely to spread and yield may be affected
                             Disease exceeds threshold established by your state extension plant pathologist`
+            },
             NORTHERN_LEAF_BLIGHT: {
                 name: "Northern Leaf Blight",
                 suggestion: `Crop rotation to reduce previous corn residues and disease inoculum.
@@ -95,8 +96,8 @@ export default cropTypes = {
         name: "Grape",
         conditions: {
             BLACK_ROT: {
-                name: "Black rot"
-                suggestion `Cut off the obviously affected parts of the grape vine with a sterile knife.
+                name: "Black rot",
+                suggestion: `Cut off the obviously affected parts of the grape vine with a sterile knife.
                 Remove all spotted leaves and the black, mummified grapes.
                 Be extremely thorough and make sure you remove all parts of the plant 
                 that are affected by the black rot.`
@@ -107,7 +108,7 @@ export default cropTypes = {
                 further infection.`
             },
             LEAF_BLIGHT_ISARIOPSIS_LEAF_SPOT: {
-                name: "Leaf blight (Isariopsis Leaf Spot)"
+                name: "Leaf blight (Isariopsis Leaf Spot)",
                 suggestion: `Fungicides sprayed for other diseases in the season may help to reduce this disease.`
             },
             HEALTHY: {
@@ -230,22 +231,13 @@ export default cropTypes = {
         name: "Tomato",
         conditions: {
             BACTERIAL_SPOT: {
-                name: "Bacterial spot",
-                suggestion: `The primary management strategy of bacterial spot begins with use of certified pathogen-free 
-                seed and disease-free transplants. The bacteria do not survive well once host material has decayed, so 
-                crop rotation is recommended. Once the bacteria are introduced into a field or greenhouse, the disease is very difficult to control.`
+                name: "Bacterial spot"
             },
             EARLY_BLIGHT: {
-                name: "Early blight",
-                suggestion: `Treat organically with copper spray.
-                Rotate crops and plant disease resistent hybrids.
-                Give tomato plants extra space. 
-                `
+                name: "Early blight"
             },
             LATE_BLIGHT: {
-                name: "Late blight",
-                suggestion: `Water in the early morning hours, or use soaker hoses, to give plants time to dry out during the day — avoid overhead irrigation.
-                            Apply a copper-based fungicide.`
+                name: "Late blight"
             },
             LEAF_MOLD: {
                 name: "Leaf mold"
