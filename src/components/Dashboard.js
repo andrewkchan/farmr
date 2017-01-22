@@ -76,6 +76,7 @@ class Dashboard extends Component {
                     marginLeft: 40, }}
                     
                     onPress={this.goToCrop.bind(this, cropId)}
+                    key={cropId}
                     >
 
                         <Image
