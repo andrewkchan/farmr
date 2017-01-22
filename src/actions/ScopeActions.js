@@ -61,11 +61,11 @@ export function fetchDiagnosisSuggestions(capturedImage) {
         }).then((json) => {
             const { plantClass } = json;
             console.log("CLASSIFIED PLANT CLASS:" + plantClass);
-            plantClass = plantClass.toUpperCase();
-            plantClass = plantClass.replace(" ", "_");
-            plantClass = plantClass.replace("(", "_");
-            plantClass = plantClass.replace(")", "_");
-            dispatch(receiveDiagnosisSuggestions(plantClass));
+            let plantStr = plantClass.toUpperCase();
+            plantStr = plantStr.replace(" ", "_");
+            plantStr = plantStr.replace("(", "_");
+            plantStr = plantStr.replace(")", "_");
+            dispatch(receiveDiagnosisSuggestions(plantStr));
         });
        
         //fetch diagnosis either from sqlite DB or internet
