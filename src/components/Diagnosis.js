@@ -38,14 +38,14 @@ class Diagnosis extends Component {
     render() {
         return (
                 <View style={containerStyle}>
-                    <Text>
-                        Diseases!
+                    <Text style = {{marginTop: 20, textAlign: 'center', color: '#A9A9A9', fontSize: 15}}>
+                        Diseases:
                     </Text>
                     
                     <TouchableOpacity>
                         <Icon
                             name = "times"
-                            size={30}
+                            size={50}
                             onPress ={this.onButtonPress}
                             style = {styles.button}
                             color="#BA4F4F"

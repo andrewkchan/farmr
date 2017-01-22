@@ -15,6 +15,12 @@ const imageStyle = {
     alignSelf: "center"
 };
 
+const thumbnailStyle = {
+    width: 30,
+    height: 30,
+    alignSelf: "center"
+};
+
 class Dashboard extends Component {
     constructor(props){
         super(props);
@@ -32,8 +38,35 @@ class Dashboard extends Component {
         const { croplist, crops } = this.props;
         const { cropIds } = croplist;
         const { crops } = crops;
-        cropIds.forEach((cropId) => {
-            
+        if (cropIds.length === 0) {
+            return (
+                <View>
+                <View style={{alignSelf: "center", margin: 15}}>
+                    <Text>
+                    You have no crops in your circle. :(
+                    </Text>
+                </View>
+                <Image
+                    source={require("../images/dirticon.png")}
+                    style={imageStyle}
+                    resizeMode="contain"
+                />
+                </View>
+            );
+        }
+        return cropIds.map((cropId) => {
+            return (
+                <View style={{flex: 1, flexDirection: "column", alignSelf: "center", margin: 15}}>
+                    <Image
+                        source={require("../images/dirticon.png")}
+                        style={thumbnailStyle}
+                        resizeMode="contain"
+                    />
+                    <Text>
+                    {crops[cropId].name}
+                    </Text>
+                </View>
+            );
         });
     }
     
@@ -50,16 +83,7 @@ class Dashboard extends Component {
 
         return (
             <View style={{flex: 1, flexDirection: "column"}}>
-                <View style={{alignSelf: "center", margin: 15}}>
-                    <Text>
-                    You have no crops in your circle. :(
-                    </Text>
-                </View>
-                <Image
-                    source={require("../images/dirticon.png")}
-                    style={imageStyle}
-                    resizeMode="contain"
-                />
+                {this.renderCrops()}
                 <TouchableOpacity
                     style={{flex: 1, alignSelf: "center"}}
                     onPress={this.goToCamera}
