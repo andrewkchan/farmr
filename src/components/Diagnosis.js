@@ -60,11 +60,11 @@ class Diagnosis extends Component {
                     
                     <TouchableOpacity>
                         <Icon
-                            name = "times"
+                            name = "toggle-right"
                             size={50}
                             onPress ={this.onButtonPress}
                             style = {styles.button}
-                            color="#BA4F4F"
+                            color="green"
                         />
                       
                     </TouchableOpacity>
