@@ -4,6 +4,8 @@ import { View, Text, Button, Image, TouchableOpacity } from "react-native";
 import Camera from "../components/Camera";
 import Picture from "../components/Picture";
 
+import addCrop from "../actions/CropActions";
+
 const propTypes = {
     dispatch: PropTypes.func.isRequired
 };
@@ -34,7 +36,7 @@ class Dashboard extends Component {
         });
     }
     goToCrop(cropId) {
-        const { navigator } = this.props;
+        const { dispatch, navigator } = this.props;
         console.log("go to crops");
         navigator.replace({
             id: `crop${cropId}`
