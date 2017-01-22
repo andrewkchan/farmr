@@ -37,7 +37,7 @@ class Splash extends Component {
                 style={viewStyle}
             >
                 <Image
-                    source={require("../images/splash.png")}
+                    source={require("../images/smallsplash.png")}
                     style={imageStyle}
                     resizeMode="contain"
                 />
