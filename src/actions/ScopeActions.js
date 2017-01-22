@@ -25,7 +25,7 @@ export function setCapturedImage(image) {
 export function processCapturedImage(image) {
     return (dispatch, getState) => {
         //do native tensorflow stuff...
-        
+        testGuesser();
     };
 }
 

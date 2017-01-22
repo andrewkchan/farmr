@@ -230,13 +230,22 @@ export default cropTypes = {
         name: "Tomato",
         conditions: {
             BACTERIAL_SPOT: {
-                name: "Bacterial spot"
+                name: "Bacterial spot",
+                suggestion: `The primary management strategy of bacterial spot begins with use of certified pathogen-free 
+                seed and disease-free transplants. The bacteria do not survive well once host material has decayed, so 
+                crop rotation is recommended. Once the bacteria are introduced into a field or greenhouse, the disease is very difficult to control.`
             },
             EARLY_BLIGHT: {
-                name: "Early blight"
+                name: "Early blight",
+                suggestion: `Treat organically with copper spray.
+                Rotate crops and plant disease resistent hybrids.
+                Give tomato plants extra space. 
+                `
             },
             LATE_BLIGHT: {
-                name: "Late blight"
+                name: "Late blight",
+                suggestion: `Water in the early morning hours, or use soaker hoses, to give plants time to dry out during the day — avoid overhead irrigation.
+                            Apply a copper-based fungicide.`
             },
             LEAF_MOLD: {
                 name: "Leaf mold"
