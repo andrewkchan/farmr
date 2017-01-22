@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from "react";
-import { View, Text, Image, TouchableOpacity, Button } from "react-native";
+import { View, Text, Image, TouchableOpacity, Button, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 
 
