@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         justifyContent:'space-between'
     },
     button: {
-        marginTop: 80,
+        marginTop: 200,
         marginLeft: 0,
         alignSelf: 'center',
     }
