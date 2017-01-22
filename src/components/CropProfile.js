@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from "react";
+import { View, Image, Text } from "react-native";
 
 import cropTypes from "../constants/CropTypes";
 
