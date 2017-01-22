@@ -17,7 +17,10 @@ public class Guesser{
     
     
     static{
-        singleton = Classifier.create("AssetMangerPlaceholder",MODEL_FILE,LABEL_FILE,NUM_CLASSES,INPUT_SIZE,IMAGE_MEAN,IMAGE_STD,INPUT_NAME,OUTPUT_NAME);
-
+        try {
+            singleton = Classifier.create("AssetMangerPlaceholder",MODEL_FILE,LABEL_FILE,NUM_CLASSES,INPUT_SIZE,IMAGE_MEAN,IMAGE_STD,INPUT_NAME,OUTPUT_NAME);
+        } catch (final Exception e) {
+            1+1;
+        }
     }
 }
