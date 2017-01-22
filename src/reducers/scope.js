@@ -14,5 +14,7 @@ export default function scope(state = initialState, action) {
             return { ...state, capturedImage: action.image };
         case types.RECEIVE_DIAGNOSIS_SUGGESTIONS:
             return { ...state, suggestions: action.suggestions };
+        default:
+            return state;
     }
 }

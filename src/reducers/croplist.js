@@ -17,5 +17,7 @@ export default function croplist(state = initialState, action) {
         }
         case types.RECEIVE_CROPLIST:
             return { ...state, cropIds: action.cropIds };
+        default:
+            return state;
     }
 }
