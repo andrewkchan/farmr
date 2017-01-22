@@ -98,7 +98,7 @@ class Root extends Component {
                     const { crops } = entities;
                     const crop = crops[routeId.slice(4, routeId.length)];
                     return (
-                        <CropProfile crop={crop} />
+                        <CropProfile crop={crop} navigator={navigator} />
                     );
                 }
                 return null;

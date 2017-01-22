@@ -5,7 +5,8 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import cropTypes from "../constants/CropTypes";
 
 const propTypes = {
-    crop: PropTypes.object.isRequired
+    crop: PropTypes.object.isRequired,
+    navigator: PropTypes.object.isRequired
 };
 
 const profilePic = {
