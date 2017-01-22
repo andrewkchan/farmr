@@ -21,9 +21,9 @@ class CropProfile extends Component {
     }
     
     onButtonPress(){
-          const { navigator } = this.props;
+        const { navigator } = this.props;
         navigator.replace({
-            id: "dashboard"
+        id: "dashboard"
         });
     }
     
@@ -46,11 +46,10 @@ class CropProfile extends Component {
                 <Text style={{alignSelf: "center"}}>
                 { crop.condition.name }
                 </Text>
-                 <TouchableOpacity>
+                 <TouchableOpacity onPress ={this.onButtonPress}>
                         <Icon
                             name = "times"
                             size={50}
-                            onPress ={this.onButtonPress}
                             style = {{alignSelf:'center'}}
                             color="#BA4F4F"
                         />
