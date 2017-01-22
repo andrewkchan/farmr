@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from "react";
 import { Provider } from "react-redux";
 import configureStore from "../store/configureStore";
 import RootContainer from "../containers/RootContainer";
+import { connect } from "react-redux";
 
 import {fetchCropSet} from "../actions/CropActions";
 import {loadCropListFromSet} from "../actions/CropListActions";
@@ -28,4 +29,4 @@ function mapStateToProps(state) {
     return state;
 }
 
-export default connectStateToProps(mapStateToProps)(App);
+export default connect(mapStateToProps)(App);
