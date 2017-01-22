@@ -7,7 +7,7 @@ import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 
 public class Guesser{
-    public static final String MODEL_FILE = "../../../assets",
+    public static final String MODEL_FILE = "",
                             LABEL_FILE = "",
                             INPUT_NAME = "input:0",
                             OUTPUT_NAME = "output:0";
