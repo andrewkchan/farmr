@@ -47,7 +47,7 @@ class Diagnosis extends Component {
         });
     }
     render() {
-        if (this.scope.diagnosisComplete == false){
+        if (this.props.scope.diagnosisComplete == false){
             return(
                 <Image source={{uri: 'http://www.urltogif/image.gif'}} />
                 );
@@ -57,11 +57,11 @@ class Diagnosis extends Component {
                 <View style={containerStyle}>
                     <Text style = {{marginTop: 20, textAlign: 'center', color: 'black', fontSize: 40}}>
                         Diseases:{"\n\n"} 
-                        {this.scope.diagnosis}
+                        {this.props.scope.diagnosis}
                     </Text>
                     <Text style = {{marginTop: 20, textAlign: 'center', color: 'black', fontSize: 40}}>
                         Recommendations:
-                        {this.scope.suggestions}
+                        {this.props.scope.suggestions}
                     </Text>
                     
                     <TouchableOpacity>
