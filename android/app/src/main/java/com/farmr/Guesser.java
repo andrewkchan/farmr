@@ -1,7 +1,7 @@
 package com.farmr;
 
 import org.tensorflow.demo.Classifier;
-import org.tensorflow.demo.ImageClassifier;
+import org.tensorflow.demo.TensorFlowImageClassifier;
 
 public class Guesser{
     public static final String MODEL_FILE = "",
