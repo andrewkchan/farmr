@@ -49,15 +49,15 @@ class CropProfile extends Component {
                 </Text>
                  <TouchableOpacity onPress={this.onButtonPress}>
                         <Icon
-                            name = "camera"
+                            name = "arrow-circle-left"
                             size={50}
-                            style = {{alignSelf:'center', marginRight:50, marginTop: 300,}}
+                            style = {{alignSelf:'center', marginRight:10, marginTop: 300,}}
                             color="#499E9C"
                         />
                         <Icon
                             name = "camera"
                             size={50}
-                            style = {{alignSelf:'center', marginTop: 310}}
+                            style = {{alignSelf:'center'}}
                             color="gray"
                         />
                 </TouchableOpacity>
