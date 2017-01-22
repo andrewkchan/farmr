@@ -57,6 +57,7 @@ class Diagnosis extends Component {
                 <View style={containerStyle}>
                     <Text style = {{marginTop: 20, textAlign: 'center', color: 'black', fontSize: 40}}>
                         Diseases:{"\n\n"} 
+                        {this.scope.diagnosis}
                     </Text>
                     <Text style = {{marginTop: 20, textAlign: 'center', color: 'black', fontSize: 40}}>
                         Recommendations:

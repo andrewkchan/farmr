@@ -62,6 +62,9 @@ export function fetchDiagnosisSuggestions(capturedImage) {
             const { plantClass } = json;
             console.log("CLASSIFIED PLANT CLASS:" + plantClass);
             plantClass = plantClass.toUpperCase();
+            plantClass = plantClass.replace(" ", "_");
+            plantClass = plantClass.replace("(", "_");
+            plantClass = plantClass.replace(")", "_");
             dispatch(receiveDiagnosisSuggestions(plantClass));
         });
        
@@ -73,7 +76,8 @@ export function fetchDiagnosisSuggestions(capturedImage) {
 export function receiveDiagnosisSuggestions(plantClass) {
     return {
         type: types.RECEIVE_DIAGNOSIS_SUGGESTIONS,
-        diagnosis: cropTy
+        diagnosis: plantClass,
+        suggestions: "Placeholder. COMING SOON: Suggestions"
     };
 }
 
