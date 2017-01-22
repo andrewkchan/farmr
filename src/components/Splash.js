@@ -20,9 +20,9 @@ const imageSplash = {
 };
 
 class Splash extends Component {
-    // componentDidMount() {
-    //     setTimeout(() => this.nav(), 2000);
-    // }
+    componentDidMount() {
+        setTimeout(() => this.nav(), 2000);
+    }
 
     nav() {
         const { navigator } = this.props;
