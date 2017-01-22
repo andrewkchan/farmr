@@ -4,6 +4,9 @@ export default cropTypes = {
         conditions: {
             APPLE_SCAB: {
                 name: "Apple Scab"
+            },
+            BLACK_ROT: {
+                name: "Black Rot"
             }
         }
     },
