@@ -8,8 +8,6 @@ export function capture() {
 
 export function receiveCapturedImage(image) {
     return (dispatch) => {
-        console.log("receiving image");
-        console.log(image);
         dispatch(processCapturedImage(image));
         dispatch(setCapturedImage(image));
     };
@@ -30,7 +28,7 @@ export function processCapturedImage(image) {
 
 export function fetchDiagnosisSuggestions() {
     return (dispatch) => {
-        console.log("should be fetching diagnosis right now");
+       
         //fetch diagnosis either from sqlite DB or internet
         //get promise.then((suggestions) => { dispatch(receiveDiagnosisSuggestions(suggestions)); });
     };

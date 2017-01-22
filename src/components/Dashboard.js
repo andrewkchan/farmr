@@ -28,6 +28,11 @@ class Dashboard extends Component {
         });
     }
     
+    renderCrops() {
+        const { croplist } = this.props;
+        
+    }
+    
     render() {
         const { captured } = this.props;
 
