@@ -35,7 +35,7 @@ public class Guesser{
     
     public static List<Classifier.Recognition> guessPlant(Bitmap img, AssetManager mgr){
        Classifier c = getClassifier(mgr);
-       return null ? c == null : c.recognizeImage(img);
+       return c == null ? null : c.recognizeImage(img);
     }
     
     public static List<Classifier.Recognition> guessPlant(Bitmap img){
