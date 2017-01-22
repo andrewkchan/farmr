@@ -12,7 +12,7 @@ const imageStyle = {
     width: 100,
     height: 100,
     marginBottom: 350,
-    flexDirection: 'row'
+    alignSelf: "center"
 };
 
 const thumbnailStyle = {
@@ -38,7 +38,7 @@ class Dashboard extends Component {
         const { croplist, entities } = this.props;
         const { cropIds } = croplist;
         const { crops } = entities;
-        if (cropIds.length === 0) {
+        if (0 === 0) {
             return (
                 <View>
                 <View style={{alignSelf: "center", margin: 15}}>
