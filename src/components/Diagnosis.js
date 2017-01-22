@@ -2,6 +2,10 @@ import React, { Component, PropTypes } from "react";
 import { View, Text, Image, TouchableOpacity, Button, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 
+import { addCrop } from "../actions/CropActions";
+import cropTypes from "../constants/CropTypes";
+import { loadCropListFromSet } from "../actions/CropListActions";
+
 
 const containerStyle = {
     flexDirection: "column",
@@ -30,7 +34,14 @@ class Diagnosis extends Component {
         this.onButtonPress = this.onButtonPress.bind(this);
     }
     onButtonPress(){
-        const { navigator } = this.props;
+        const { dispatch, navigator, scope } = this.props;
+        dispatch(addCrop({
+            name: "NEW CROP",
+            species: cropTypes.POTATO,
+            condition: cropTypes.POTATO.conditions.LATE_BLIGHT,
+            timestamp: Date.now()
+        }));
+        dispatch(loadCropListFromSet());
         navigator.replace({
             id: "dashboard"
         });

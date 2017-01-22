@@ -64,10 +64,13 @@ class Dashboard extends Component {
                         <Image
                             source={require("../images/dirticon.png")}
                             style={thumbnailStyle}
-                            //resizeMode="contain"
+                            resizeMode="contain"
                         />
                         <Text>
                         {crops[cropId].name}
+                        </Text>
+                        <Text>
+                        {crops[cropId].species.name}
                         </Text>
                     </TouchableOpacity>
                 );
