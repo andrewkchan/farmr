@@ -14,8 +14,8 @@ const viewStyle = {
 };
 
 const imageStyle = {
-    width: 360,
-    height: 480,
+    width: 180,
+    height: 240,
   
 };
 
@@ -37,7 +37,7 @@ class Splash extends Component {
                 style={viewStyle}
             >
                 <Image
-                    source={require("../images/splash_screen.png")}
+                    source={require("../images/splash.png")}
                     style={imageStyle}
                     resizeMode="contain"
                 />
