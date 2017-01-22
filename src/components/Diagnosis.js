@@ -22,14 +22,19 @@ const styles = StyleSheet.create({
     }
 })
 
-const onButtonPress = () => {
-     const { navigator } = this.props;
+
+
+class Diagnosis extends Component {
+    constructor(props){
+        super(props);
+        this.onButtonPress = this.onButtonPress.bind(this);
+    }
+    onButtonPress(){
+        const { navigator } = this.props;
         navigator.replace({
             id: "dashboard"
         });
-};
-
-class Diagnosis extends Component {
+    }
     render() {
         return (
                 <View style={containerStyle}>
