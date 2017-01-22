@@ -47,7 +47,14 @@ class Diagnosis extends Component {
         });
     }
     render() {
-
+        if (this.props.scope.diagnosisComplete == false){
+            return(
+                <View style={{backgroundColor:'#fff'}}>
+                <Image source={{uri: '../images/default.gif'}} />
+                </View>
+                );
+        }
+        else {
         return (
                 <View style={containerStyle}>
                     <Text style = {{marginTop: 20, textAlign: 'center', color: 'black', fontSize: 40}}>
@@ -74,6 +81,7 @@ class Diagnosis extends Component {
             
             
             );
+        }
     }
     
 }
