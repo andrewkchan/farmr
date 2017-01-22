@@ -20,18 +20,18 @@ public class Guesser{
     private static Classifier singleton; 
     
     
-    private static Classifier getClassifier(AssetManager manager){
-        if (manager != null){
-            this.manager = manager;
+    private static Classifier getClassifier(AssetManager mgr){
+        if (mgr != null){
+            manager = mgr;
         }
-        if (this.manager != null){
-            singleton = TensorFlowImageClassifier.create(this.manager, MODEL_FILE, LABEL_FILE, NUM_CLASSES, INPUT_SIZE, IMAGE_MEAN, IMAGE_STD, INPUT_NAME, OUTPUT_NAME);
+        if (manager != null){
+            singleton = TensorFlowImageClassifier.create(manager, MODEL_FILE, LABEL_FILE, NUM_CLASSES, INPUT_SIZE, IMAGE_MEAN, IMAGE_STD, INPUT_NAME, OUTPUT_NAME);
         }
         return singleton;
     }
     
-    public static void init(AssetManager manager){
-        getClassifier(manager);
+    public static void init(AssetManager mgr){
+        getClassifier(mgr);
     } 
     
     public static List<Classifier.Recognition> guessPlant(Bitmap img, AssetManager mgr){
