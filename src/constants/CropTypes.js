@@ -45,6 +45,6 @@ export default cropTypes = {
         name: "Strawberry"
     },
     TOMATO: {
-        
+        name: "Tomato"
     }
 }

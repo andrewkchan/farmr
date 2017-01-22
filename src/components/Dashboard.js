@@ -11,7 +11,7 @@ const propTypes = {
 const defaultStyle = {
     width: 100,
     height: 100,
-    marginBottom: 350,
+    marginBottom: 300,
     alignSelf: "center"
 };
 
