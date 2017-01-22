@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from "react";
-import { View, Image, Text } from "react-native";
+import { View, Image, Text, TouchableOpacity } from "react-native";
 
 import cropTypes from "../constants/CropTypes";
 
@@ -50,7 +50,7 @@ class CropProfile extends Component {
                             name = "times"
                             size={50}
                             onPress ={this.onButtonPress}
-                            style = {styles.button}
+                            style = {{alignSelf:'center'}}
                             color="#BA4F4F"
                         />
                 </TouchableOpacity>
