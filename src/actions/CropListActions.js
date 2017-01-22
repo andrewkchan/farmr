@@ -4,7 +4,7 @@ export function loadCropListFromSet() {
     return (dispatch, getState) => {
         const { entities } = getState();
         const { crops } = entities;
-        const cropIds = [].from(crops);
+        const cropIds = Array.from(crops);
         cropIds.sort((a, b) => {
             if (a.name < b.name) {
                 return -1;
