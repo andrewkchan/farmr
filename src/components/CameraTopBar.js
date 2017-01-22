@@ -33,7 +33,7 @@ class CameraTop extends Component {
     render() {
         return (
             <View style={containerStyle}>
-                <TouchableHighlight onPress={onBackPress} style={{flex: 1}}>
+                <TouchableHighlight onPress={this.onBackPress} style={{flex: 1}}>
                     <Icon
                         name="angle-left"
                         size={30}

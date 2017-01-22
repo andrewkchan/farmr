@@ -4,6 +4,6 @@ export function loadCropListFromSet() {
     return (dispatch, getState) => {
         const { crops } = getState();
         const { crops } = crops;
-        dispatch(receiveCropList(SAMPLE_CROPLIST));
+        dispatch();
     }
 }
