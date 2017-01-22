@@ -4,13 +4,15 @@ import configureStore from "../store/configureStore";
 import RootContainer from "../containers/RootContainer";
 
 import fetchCropSet from "../actions/CropActions";
+import loadCropListFromSet from "../actions/CropListActions";
 
 const store = configureStore(undefined);
 
 class App extends Component {
     componentDidMount() {
         //dispatch initialization actions
-        dispatch()
+        dispatch(fetchCropSet());
+        dispatch(loadCropListFromSet());
     }
     
     render() {
