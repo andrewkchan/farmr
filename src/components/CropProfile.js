@@ -51,7 +51,7 @@ class CropProfile extends Component {
                         <Icon
                             name = "arrow-circle-left"
                             size={50}
-                            style = {{alignSelf:'center', marginTop: 400}}
+                            style = {{alignSelf:'center', marginTop: 300}}
                             color="#499E9C"
                         />
                 </TouchableOpacity>
