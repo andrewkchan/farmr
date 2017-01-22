@@ -49,7 +49,9 @@ class Diagnosis extends Component {
     render() {
         if (this.props.scope.diagnosisComplete == false){
             return(
+                <View style={{backgroundColor:'#fff'}}>
                 <Image source={{uri: '../images/default.gif'}} />
+                </View>
                 );
         }
         else {
