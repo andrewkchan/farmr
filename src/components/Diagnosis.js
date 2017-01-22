@@ -9,7 +9,6 @@ import { loadCropListFromSet } from "../actions/CropListActions";
 
 const containerStyle = {
     flexDirection: "column",
-    height: 90,
     justifyContent: "space-between"
 };
 
