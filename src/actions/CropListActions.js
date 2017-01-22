@@ -5,6 +5,9 @@ export function loadCropListFromSet() {
         const { crops } = getState();
         const { crops } = crops;
         const cropIds = Arrays.from(crops);
-        dispatch(receiveCropList())
+        cropIds.sort((a, b) => {
+                
+        });
+        dispatch(receiveCropList());
     }
 }
