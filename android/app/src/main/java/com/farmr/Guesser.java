@@ -4,6 +4,7 @@ import org.tensorflow.demo.Classifier;
 import org.tensorflow.demo.TensorFlowImageClassifier;
 import java.util.List;
 import android.content.res.AssetManager;
+import android.graphics.Bitmap;
 
 public class Guesser{
     public static final String MODEL_FILE = "",
