@@ -34,11 +34,11 @@ class Splash extends Component {
     render() {
         return (
             <View
-                //style={viewStyle}
+                style={viewStyle}
             >
                 <Image
                     source={require("../images/splash.png")}
-                    style={imageStyle}
+                    //style={imageStyle}
                     resizeMode="contain"
                 />
             </View>
