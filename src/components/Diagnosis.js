@@ -52,7 +52,10 @@ class Diagnosis extends Component {
         return (
                 <View style={containerStyle}>
                     <Text style = {{marginTop: 20, textAlign: 'center', color: 'black', fontSize: 40}}>
-                        Diseases:
+                        Diseases:{"\n\n"}
+                    </Text>
+                    <Text style = {{marginTop: 20, textAlign: 'center', color: 'black', fontSize: 40}}>
+                        Recommendations:
                     </Text>
                     
                     <TouchableOpacity>
