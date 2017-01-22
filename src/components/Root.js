@@ -27,6 +27,7 @@ class Root extends Component {
     }
     
     componentDidMount() {
+        const { dispatch } = this.props;
         //dispatch initialization actions
         dispatch(fetchCropSet());
         dispatch(loadCropListFromSet());
