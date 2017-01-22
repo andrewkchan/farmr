@@ -6,11 +6,11 @@ const initialState = {
 
 export default function entities(state = initialState, action) {
     switch(action.crops) {
-        case 
-    }
-    if (action.crops) {
-        return { ...state, crops: { ...state.crops, ...action.crops } };
-    } else {
-        return state;
+        case types.RECEIVE_CROPSET:
+            return { ...state, crops: { ...state.crops, ...action.crops } };
+        case types.ADD_CROP:
+            
+        default:
+            return state;
     }
 }

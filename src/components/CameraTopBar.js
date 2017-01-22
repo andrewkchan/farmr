@@ -37,7 +37,7 @@ class CameraTop extends Component {
                     <Icon
                         name="flash"
                         size={30}
-                        style={{...iconStyle, marginLeft: 110, }}
+                        style={{...iconStyle, marginLeft: 120, }}
                         color="#fff"
                     />
                 </TouchableHighlight>
