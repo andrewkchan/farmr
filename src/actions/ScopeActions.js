@@ -1,6 +1,7 @@
 import * as types from "../constants/ActionTypes";
 
 import Guesser from "../modules/Guesser";
+import cropTypes from "../constants/CropTypes";
 
 export function capture() {
     return {
@@ -60,6 +61,7 @@ export function fetchDiagnosisSuggestions(capturedImage) {
         }).then((json) => {
             const { plantClass } = json;
             console.log("CLASSIFIED PLANT CLASS:" + plantClass);
+            plantClass = plantClass.toUpperCase();
             dispatch(receiveDiagnosisSuggestions(plantClass));
         });
        
@@ -68,10 +70,10 @@ export function fetchDiagnosisSuggestions(capturedImage) {
     };
 }
 
-export function receiveDiagnosisSuggestions(suggestionsStr) {
+export function receiveDiagnosisSuggestions(plantClass) {
     return {
         type: types.RECEIVE_DIAGNOSIS_SUGGESTIONS,
-        suggestionsStr
+        diagnosis: cropTy
     };
 }
 
