@@ -24,7 +24,7 @@ public class Guesser{
             this.manager = manager;
         }
         if (this.manager != null){
-            singleton = singleton == null ? TensorFlowImageClassifier.create(this.manager, MODEL_FILE, LABEL_FILE, NUM_CLASSES, INPUT_SIZE, IMAGE_MEAN, IMAGE_STD, INPUT_NAME, OUTPUT_NAME) : singleton;
+            singleton = null ? singleton == null : TensorFlowImageClassifier.create(this.manager, MODEL_FILE, LABEL_FILE, NUM_CLASSES, INPUT_SIZE, IMAGE_MEAN, IMAGE_STD, INPUT_NAME, OUTPUT_NAME) : singleton;
         }
         return singleton;
     }
@@ -35,7 +35,7 @@ public class Guesser{
     
     public static List<Classifier.Recognition> guessPlant(Bitmap img, AssetManager mgr){
        Classifier c = getClassifier(mgr);
-       return c == null : null ? c.recognizeImage(img);
+       return null ? c == null : c.recognizeImage(img);
     }
     
     public static List<Classifier.Recognition> guessPlant(Bitmap img){
