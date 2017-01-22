@@ -16,7 +16,7 @@ const containerStyle = {
 
 const iconStyle = {
     margin: 20,
-    alignSelf: "center"
+    
 };
 
 class CameraTop extends Component {
