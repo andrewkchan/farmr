@@ -29,7 +29,7 @@ public class Guesser{
             try{
                 singleton = TensorFlowImageClassifier.create(manager, MODEL_FILE, LABEL_FILE, NUM_CLASSES, INPUT_SIZE, IMAGE_MEAN, IMAGE_STD, INPUT_NAME, OUTPUT_NAME);
             } catch (Exception e){
-                
+                System.err.println("Could not create TensorFlowImageClassifier singleton");
             }
         }
         return singleton;
