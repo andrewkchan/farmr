@@ -18,6 +18,7 @@ public class Guesser{
     
     static{
         try {
+            // The null asset manager needs to be replaced with a call to getAssets() from the activity.
             singleton = TensorFlowImageClassifier.create(null,MODEL_FILE,LABEL_FILE,NUM_CLASSES,INPUT_SIZE,IMAGE_MEAN,IMAGE_STD,INPUT_NAME,OUTPUT_NAME);
         } catch (final Exception e) {
             // TODO: Handle this shit
