@@ -45,7 +45,7 @@ public class Guesser{
     }
     
     public static List<Classifier.Recognition> guessPlant(Bitmap img){
-        return guessPlant(img,null);
+        return guessPlant(img, null);
         
     }
     

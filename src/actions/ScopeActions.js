@@ -1,5 +1,7 @@
 import * as types from "../constants/ActionTypes";
 
+import Guesser from "../modules/Guesser";
+
 export function capture() {
     return {
         type: types.CAPTURE
@@ -23,7 +25,17 @@ export function setCapturedImage(image) {
 export function processCapturedImage(image) {
     return (dispatch, getState) => {
         //do native tensorflow stuff...
+        
     };
+}
+
+async function testGuesser() {
+    try {
+        let helloWorldStr = await Guesser.test();
+        console.log(helloWorldStr);
+    } catch (e) {
+        console.error(e);
+    }
 }
 
 export function fetchDiagnosisSuggestions() {
