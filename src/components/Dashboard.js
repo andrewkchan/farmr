@@ -56,7 +56,7 @@ class Dashboard extends Component {
         }
         return cropIds.map((cropId) => {
             return (
-                <View style={{flex: 1, flexDirection: "column", alignSelf: "center", margin: 15}}>
+                <View style={{flex: 1, flexDirection: "row", alignSelf: "center", margin: 15}}>
                     <Image
                         source={require("../images/dirticon.png")}
                         style={thumbnailStyle}
