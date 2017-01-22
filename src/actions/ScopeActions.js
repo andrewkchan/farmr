@@ -10,6 +10,7 @@ export function capture() {
 
 export function receiveCapturedImage(image) {
     return (dispatch) => {
+        console.log(image.uri);
         dispatch(processCapturedImage(image));
         dispatch(setCapturedImage(image));
     };
@@ -40,6 +41,7 @@ async function testGuesser() {
 
 export function fetchDiagnosisSuggestions() {
     return (dispatch) => {
+        //fetch('')
        
         //fetch diagnosis either from sqlite DB or internet
         //get promise.then((suggestions) => { dispatch(receiveDiagnosisSuggestions(suggestions)); });
