@@ -13,9 +13,9 @@ public class MainActivity extends ReactActivity {
     protected String getMainComponentName() {
         return "farmr";
     }
-    /*
+    
     @Override
     public void onCreate (Bundle savedInstanceState){
-        Guesser.init(getAssets());
-    }*/
+     //   Guesser.init(getAssets());
+    }
 }
