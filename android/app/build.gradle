@@ -131,19 +131,6 @@ dependencies {
     compile "com.facebook.react:react-native:+"  // From node_modules
 }
 
-task copyNativeLibs(type: Copy) {
-	from(new File(project(':app').buildDir, 'native-libs')) { include '**/*.so' }
-	into new File(buildDir, 'native-libs')
-}
-
-tasks.withType(Compile) { compileTask -> compileTask.dependsOn copyNativeLibs }
-
-clean.dependsOn 'cleanCopyNativeLibs'
-
-tasks.withType(com.android.build.gradle.PackageApplicationTask) { pkgTask ->
-	pkgTask.jniDir new File(buildDir, 'native-libs')
-}
-
 // Run this once to be able to run the application with BUCK
 // puts all compile dependencies into folder libs for BUCK to use
 task copyDownloadableDepsToLibs(type: Copy) {
