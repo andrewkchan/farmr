@@ -41,6 +41,7 @@ async function testGuesser() {
 
 export function fetchDiagnosisSuggestions() {
     return (dispatch, getState) => {
+        console.log("FECHING STUFFFFFFFFFFFFFFFFFFFFFFFFFF");
         const { scope } = getState();
         const { capturedImage } = scope;
         const photo = {
