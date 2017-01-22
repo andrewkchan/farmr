@@ -54,7 +54,9 @@ class CropProfile extends Component {
                             style = {{alignSelf:'flex-start', marginLeft:20, marginTop: 330}}
                             color="#499E9C"
                         />
-                        <Icon
+                </TouchableOpacity>
+                <TouchableOpacity>
+                     <Icon
                             name = "camera"
                             size={50}
                             style = {{alignSelf:'flex-start',marginLeft: 290, marginBottom: 70 }}

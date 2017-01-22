@@ -103,16 +103,6 @@ class Dashboard extends Component {
     }
     
     render() {
-        const { captured } = this.props;
-
-        if (captured) {
-            return (
-                <View style={{flex: 1}}>
-                    <Picture {...this.props} style={{flex: 1}} />
-                </View>
-            );
-        }
-
         return (
             <View style={{flex: 1, flexDirection: "column"}}>
                 {this.renderCrops()}
