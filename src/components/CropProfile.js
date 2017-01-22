@@ -32,7 +32,7 @@ class CropProfile extends Component {
         const { crop } = this.props;
         
         return (
-            <View style={{flex: 1, flexDirection: "column"}}>
+            <View style={{flex: 1, flexDirection: "column", backgroundColor: "#47cacc"}}>
                 <Image
                     source={require("../images/splash_screen.png")}
                     style={profilePic}
@@ -47,19 +47,19 @@ class CropProfile extends Component {
                 <Text style={{alignSelf: "center"}}>
                 { crop.condition.name }
                 </Text>
-                 <TouchableOpacity onPress={this.onButtonPress}>
+                 <TouchableOpacity style={{flex:1, flexDirection:'row'}} onPress={this.onButtonPress}>
                         <Icon
                             name = "arrow-circle-left"
                             size={50}
-                            style = {{alignSelf:'flex-start', marginLeft:20, marginTop: 330}}
+                            style = {{alignSelf:'flex-start', marginLeft:20, marginTop: 300}}
                             color="#499E9C"
                         />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity style={{flex:1, flexDirection:'row'}}>
                      <Icon
                             name = "camera"
                             size={50}
-                            style = {{alignSelf:'flex-start',marginLeft: 290, marginBottom: 70 }}
+                            style = {{alignSelf:'flex-start',marginLeft: 290, marginTop: 300 }}
                             color="gray"
                         />
                 </TouchableOpacity>

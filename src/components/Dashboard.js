@@ -104,7 +104,7 @@ class Dashboard extends Component {
     
     render() {
         return (
-            <View style={{flex: 1, flexDirection: "column"}}>
+            <View style={{flex: 1, flexDirection: "column", backgroundColor: "#47cacc"}}>
                 {this.renderCrops()}
                 <TouchableOpacity
                     style={{flex: 1, alignSelf: "center"}}
