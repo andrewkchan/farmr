@@ -20,10 +20,20 @@ const iconStyle = {
 };
 
 class CameraTop extends Component {
+    constructor(props) {
+        super(props);
+        this.onBackPress = this.onBackPress.bind(this);
+    }
+    onBackPress(){
+        const { navigator } = this.props;
+        navigator.replace({
+            id: "dashboard"
+        });
+    }
     render() {
         return (
             <View style={containerStyle}>
-                <TouchableHighlight style={{flex: 1}}>
+                <TouchableHighlight onPress={onBackPress} style={{flex: 1}}>
                     <Icon
                         name="angle-left"
                         size={30}

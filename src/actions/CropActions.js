@@ -8,9 +8,17 @@ Adds a new crop to the set of extant crops while creating a new unique ID for it
 Also sets the current crop to the newly added crop.
 */
 export default function addCrop(crop) {
-    return {
-        type: types.ADD_CROP,
-        crop
+    return (dispatch, getState) => {
+        const { crops } = getState();
+        const { crops } = crops;
+        let i = 0;
+        while (crops[i]) {
+            ++i;
+        }
+        dispatch(receiveCropSet({
+            [i]: crop
+        }));
+        dispatch(examineCrop(i));
     };
 }
 

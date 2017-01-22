@@ -1,28 +1,18 @@
 import { combineReducers } from "redux";
 import * as types from "../constants/ActionTypes";
+import croplist from "../reducers/croplist";
+import crops from "../reducers/crops";
+import scope from "../reducers/scope";
 
 const initialState = {
     captured: false,
     image: null
 };
 
-const rootReducer = function(state = initialState, action) {
-    switch (action.type) {
-        case types.LOGIN:
-            return { ...state };
-
-        case types.CAPTURE:
-            return { ...state, captured: true };
-
-        case types.CLOSE:
-            return { ...state, captured: false };
-
-        case types.RECEIVE_CAPTURED_IMAGE:
-            return { ...state, image: action.image };
-
-        default:
-            return state;
-    }
-}
+const rootReducer = combineReducers({
+    croplist,
+    crops,
+    scope
+});
 
 export default rootReducer;
