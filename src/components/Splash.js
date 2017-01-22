@@ -34,7 +34,7 @@ class Splash extends Component {
     render() {
         return (
             <View
-                style={viewStyle}
+                //style={viewStyle}
             >
                 <Image
                     source={require("../images/splash.png")}
