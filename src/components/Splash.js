@@ -31,16 +31,16 @@ class Splash extends Component {
         });
     }
 //<Image style={styles.bgContainer} resizeMode='cover' source={require('./img/bg.png')} />
-const styles = StyleSheet.create({ bgContainer: { flex:1, width: null, height: null } });
+//const styles = StyleSheet.create({ bgContainer: { flex:1, width: null, height: null } });
     render() {
         return (
             <View
                 style={viewStyle}
             >
                 <Image
-                    source={require("../images/smilie1.png")}
-                    style={styles.bgContainer}
-                    resizeMode='cover'
+                    source={require("../images/smallsplash.png")}
+                    style={imageStyle}
+                    resizeMode="contain"
                 />
             </View>
         );
