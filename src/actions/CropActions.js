@@ -45,8 +45,10 @@ export function fetchCropSet() {
 }
 
 export function receiveCropSet(crops) {
+    console.log("receiving crops");
+    console.log(crops);
     return {
         type: types.RECEIVE_CROPSET,
         crops
-    }
+    };
 }
