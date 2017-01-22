@@ -11,7 +11,7 @@ const propTypes = {
 const defaultStyle = {
     width: 100,
     height: 100,
-    marginBottom: 100,
+    marginBottom: 350,
     alignSelf: "center"
 };
 
@@ -60,7 +60,7 @@ class Dashboard extends Component {
         for (let i = 0; i < cropIds.length; i += MAX_ITEMS_PER_ROW) {
             const cropRow = cropIds.slice(i, i + MAX_ITEMS_PER_ROW).map((cropId) => {
                 return (
-                    <TouchableOpacity style={{flex: 1, flexDirection: "column", alignSelf: "center", margin: 10, marginLeft: 40, }}>
+                    <TouchableOpacity style={{flex: 1, flexDirection: "column", alignSelf: "center", margin: 10, marginLeft: 40, height: 50 }}>
                         <Image
                             source={require("../images/dirticon.png")}
                             style={thumbnailStyle}
