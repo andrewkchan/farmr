@@ -50,7 +50,7 @@ class Diagnosis extends Component {
         if (this.props.scope.diagnosisComplete == false){
             return(
                 <View style={{backgroundColor:'#fff'}}>
-                <Image source={{uri: '../images/default.gif'}} />
+                    <Text> Loading </Text>
                 </View>
                 );
         }
