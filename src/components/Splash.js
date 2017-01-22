@@ -10,12 +10,12 @@ const viewStyle = {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#fff73f"
+    backgroundColor: "#D3D3D3"
 };
 
 const imageSplash = {
     width: 500,
-    height: 500,
+    height: 600,
  
 };
 
@@ -40,7 +40,7 @@ class Splash extends Component {
                 <Image
                     source={require("../images/splash_screen.png")}
                     style={imageSplash}
-                    resizeMode="cover"
+                    resizeMode="contain"
                 />
             </View>
         );
