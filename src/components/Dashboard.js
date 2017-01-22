@@ -35,9 +35,9 @@ class Dashboard extends Component {
     }
     
     renderCrops() {
-        const { croplist, crops } = this.props;
+        const { croplist, entities } = this.props;
         const { cropIds } = croplist;
-        const { crops } = crops;
+        const { crops } = entities;
         if (cropIds.length === 0) {
             return (
                 <View>
