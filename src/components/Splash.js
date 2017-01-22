@@ -38,7 +38,7 @@ const styles = StyleSheet.create({ bgContainer: { flex:1, width: null, height: n
                 style={viewStyle}
             >
                 <Image
-                    source={require("../images/smallsplash.png")}
+                    source={require("../images/smilie1.png")}
                     style={styles.bgContainer}
                     resizeMode='cover'
                 />
