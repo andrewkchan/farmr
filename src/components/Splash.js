@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, StyleSheet } from "react-native";
 
 const propTypes = {
     navigator: PropTypes.object.isRequired
@@ -30,7 +30,8 @@ class Splash extends Component {
             id: "dashboard"
         });
     }
-
+//<Image style={styles.bgContainer} resizeMode='cover' source={require('./img/bg.png')} />
+const styles = StyleSheet.create({ bgContainer: { flex:1, width: null, height: null } });
     render() {
         return (
             <View
@@ -38,8 +39,8 @@ class Splash extends Component {
             >
                 <Image
                     source={require("../images/smallsplash.png")}
-                    style={imageStyle}
-                    resizeMode="contain"
+                    style={styles.bgContainer}
+                    resizeMode='cover'
                 />
             </View>
         );
