@@ -45,8 +45,10 @@ class Diagnosis extends Component {
                     <TouchableOpacity>
                         <Icon
                             name = "times"
+                            size={30}
                             onPress ={this.onButtonPress}
                             style = {styles.button}
+                            color="#BA4F4F"
                         />
                       
                     </TouchableOpacity>
