@@ -18,7 +18,7 @@ const defaultStyle = {
 const thumbnailStyle = {
     width: 30,
     height: 30,
-    flexDirection: 'row'
+    //flexDirection: 'row'
 };
 
 class Dashboard extends Component {
