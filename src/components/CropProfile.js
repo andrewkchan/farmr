@@ -47,7 +47,7 @@ class CropProfile extends Component {
                 <Text style={{alignSelf: "center"}}>
                 { crop.condition.name }
                 </Text>
-                 <TouchableOpacity onPress={this.onButtonPress}>
+                 <TouchableOpacity onPress={this.onButtonPress} style={{flexDirection:'row'}}>
                         <Icon
                             name = "arrow-circle-left"
                             size={50}
