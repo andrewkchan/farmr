@@ -1,5 +1,11 @@
 import * as types from "../constants/ActionTypes";
 
-export function fetchCropList() {
+const SAMPLE_CROPSET = {
     
+}
+
+export function fetchCropList() {
+    return (dispatch) => {
+        dispatch(receiveCropList(SAMPLE_CROPLIST));
+    }
 }
