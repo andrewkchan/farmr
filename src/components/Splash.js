@@ -14,8 +14,8 @@ const viewStyle = {
 };
 
 const imageStyle = {
-    width: 1080,
-    height: 1920,
+    width: 360,
+    height: 480,
   
 };
 
