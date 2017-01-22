@@ -84,17 +84,7 @@ class CameraBottomBar extends Component {
                         resizeMode="contain"
                     />
                 </TouchableOpacity>
-                <TouchableOpacity
-                    style={snapsButtonWrapperStyle}
-                    onPress={this.openStories}
-                >
-                    <Icon
-                        name="bars"
-                        style={{margin: 30, alignSelf: "center"}}
-                        size={32}
-                        color="#fff"
-                    />
-                </TouchableOpacity>
+             
             </View>
         );
     }
