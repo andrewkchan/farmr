@@ -32,7 +32,20 @@ class CropProfile extends Component {
         const { crop } = this.props;
         
         return (
-            <View style={{flex: 1, flexDirection: "column"}}>
+            <View 
+                style={{
+                    flex: 1, 
+                    flexDirection: "column"
+                }}>
+                <View
+                    style={{
+                    flex: 1, 
+                    flexDirection: "column", 
+                    backgroundColor: "#CC8C47",
+                    borderColor: '#795126',
+                    borderRadius: 6,
+                    borderWidth: 10,
+                }}>
                 <Image
                     source={require("../images/splash_screen.png")}
                     style={profilePic}
@@ -47,20 +60,26 @@ class CropProfile extends Component {
                 <Text style={{alignSelf: "center"}}>
                 { crop.condition.name }
                 </Text>
-                 <TouchableOpacity onPress={this.onButtonPress}>
+                <View style={{flexDirection:'row'}}>
+                 <TouchableOpacity  onPress={this.onButtonPress}>
                         <Icon
                             name = "arrow-circle-left"
                             size={50}
-                            style = {{alignSelf:'flex-start', marginLeft:20, marginTop: 300}}
+                            style = {{alignSelf:'center', marginLeft:20, marginTop: 180}}
                             color="#499E9C"
                         />
-                        <Icon
+                </TouchableOpacity>
+                <TouchableOpacity >
+                     <Icon
                             name = "camera"
-                            size={50}
-                            style = {{alignSelf:'flex-start',marginLeft: 100 }}
+                            size={45}
+                            style = {{alignSelf:'center',marginLeft: 210, marginTop: 180 }}
                             color="gray"
                         />
                 </TouchableOpacity>
+                </View>
+                </View>
+                
             </View>
         );
     }

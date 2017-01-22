@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from "react";
 import { View, Text, Image, TouchableOpacity, Button, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 
-import { addCrop } from "../actions/CropActions";
+import { updateCrop } from "../actions/CropActions";
 import cropTypes from "../constants/CropTypes";
 import { loadCropListFromSet } from "../actions/CropListActions";
 
@@ -34,7 +34,8 @@ class Diagnosis extends Component {
     }
     onButtonPress(){
         const { dispatch, navigator, scope } = this.props;
-        dispatch(addCrop({
+        const { cropId } = scope;
+        dispatch(updateCrop(cropId, {
             name: "NEW CROP",
             species: cropTypes.POTATO,
             condition: cropTypes.POTATO.conditions.LATE_BLIGHT,

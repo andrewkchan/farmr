@@ -4,6 +4,8 @@ import { View, Text, Button, Image, TouchableOpacity } from "react-native";
 import Camera from "../components/Camera";
 import Picture from "../components/Picture";
 
+import { addCrop } from "../actions/CropActions";
+
 const propTypes = {
     dispatch: PropTypes.func.isRequired
 };
@@ -28,13 +30,14 @@ class Dashboard extends Component {
     }
     
     goToCamera() {
-         const { navigator } = this.props;
+        const { dispatch, navigator } = this.props;
+        dispatch(addCrop({ name: "placeholder crop" }));
         navigator.replace({
             id: "camera"
         });
     }
     goToCrop(cropId) {
-        const { navigator } = this.props;
+        const { dispatch, navigator } = this.props;
         console.log("go to crops");
         navigator.replace({
             id: `crop${cropId}`
@@ -103,18 +106,8 @@ class Dashboard extends Component {
     }
     
     render() {
-        const { captured } = this.props;
-
-        if (captured) {
-            return (
-                <View style={{flex: 1}}>
-                    <Picture {...this.props} style={{flex: 1}} />
-                </View>
-            );
-        }
-
         return (
-            <View style={{flex: 1, flexDirection: "column"}}>
+            <View style={{flex: 1, flexDirection: "column", backgroundColor: "#47cacc"}}>
                 {this.renderCrops()}
                 <TouchableOpacity
                     style={{flex: 1, alignSelf: "center"}}
