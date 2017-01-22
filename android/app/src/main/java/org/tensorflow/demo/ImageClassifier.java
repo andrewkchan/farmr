@@ -27,10 +27,11 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Vector;
-import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
+//import org.tensorflow.contrib.android.TensorFlowInferenceInterface;
 
 /** A classifier specialized to label images using TensorFlow. */
-public class TensorFlowImageClassifier implements Classifier {
+public class ImageClassifier implements Classifier {
+  
   static {
     System.loadLibrary("tensorflow_demo");
   }

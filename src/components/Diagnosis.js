@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import { View, Text, Image, TouchableOpacity, Button } from "react-native";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 
 const containerStyle = {
@@ -7,6 +8,19 @@ const containerStyle = {
     height: 90,
     justifyContent: "space-between"
 };
+
+const styles = StyleSheet.create({
+    container: {
+        flexDirection:'row',
+        height:90,
+        justifyContent:'space-between'
+    },
+    button: {
+        margin: 20,
+        marginLeft: 0,
+        alignSelf: 'center'
+    }
+})
 
 const onButtonPress = () => {
      const { navigator } = this.props;
@@ -24,9 +38,10 @@ class Diagnosis extends Component {
                     </Text>
                     
                     <TouchableOpacity>
-                        <Button
-                            title = "Go Back"
+                        <Icon
+                            name = "times"
                             onPress ={onButtonPress}
+                            style = {styles.button}
                         />
                       
                     </TouchableOpacity>
