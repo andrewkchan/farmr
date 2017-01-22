@@ -26,7 +26,7 @@ class CameraTop extends Component {
             <View style={containerStyle}>
                 <TouchableHighlight style={{flex: 1}}>
                     <Icon
-                        name="\f0d9"
+                        name="fa-chevron-left"
                         size={30}
                         style={{...iconStyle, marginLeft: 0}}
                         color="#fff"
