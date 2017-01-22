@@ -35,7 +35,7 @@ class PictureBottom extends Component {
     onButtonPress(){
          const { navigator } = this.props;
         navigator.replace({
-        id: "diagnosis"
+        id: "analyze"
         });
     }
     render() {

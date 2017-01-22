@@ -5,6 +5,7 @@ import Dashboard from "../components/Dashboard";
 import Diagnosis from "../components/Diagnosis";
 import Camera from "../components/Camera";
 import Picture from "../components/Picture";
+import Analyze from "../components/Analyze";
 
 // import Discover from "../components/Discover";
 //import AddMe from "../components/AddMe";
@@ -35,6 +36,13 @@ class Root extends Component {
     renderScene(route, navigator) {
         const routeId = route.id;
         switch (routeId) {
+            case "analyze":
+                return (
+                    <Analyze
+                        navigator={navigator}
+                        { ...this.props }
+                    />
+                );
             case "chat":
                 return (
                     <Dashboard
