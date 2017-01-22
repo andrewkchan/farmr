@@ -24,7 +24,7 @@ public class Guesser{
             this.manager = manager;
         }
         if (this.manager != null){
-            singleton = null ? singleton == null : TensorFlowImageClassifier.create(this.manager, MODEL_FILE, LABEL_FILE, NUM_CLASSES, INPUT_SIZE, IMAGE_MEAN, IMAGE_STD, INPUT_NAME, OUTPUT_NAME) : singleton;
+            singleton = TensorFlowImageClassifier.create(this.manager, MODEL_FILE, LABEL_FILE, NUM_CLASSES, INPUT_SIZE, IMAGE_MEAN, IMAGE_STD, INPUT_NAME, OUTPUT_NAME);
         }
         return singleton;
     }
