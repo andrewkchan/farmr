@@ -7,6 +7,7 @@ const initialState = {
 export default function entities(state = initialState, action) {
     switch(action.crops) {
         case types.RECEIVE_CROPSET:
+            console.log(action.crops);
             return { ...state, crops: { ...state.crops, ...action.crops } };
         case types.UPDATE_CROP:
             return { ...state, crops: { ...state.crops, [action.cropId]: action.crop } };
