@@ -60,7 +60,7 @@ class Dashboard extends Component {
         for (let i = 0; i < cropIds.length; i += MAX_ITEMS_PER_ROW) {
             const cropRow = cropIds.slice(i, i + MAX_ITEMS_PER_ROW).map((cropId) => {
                 return (
-                    <TouchableOpacity style={{flex: 1, flexDirection: "column", alignSelf: "center", margin: 10, marginLeft: 20, marginBottom: 40}}>
+                    <TouchableOpacity style={{flex: 1, flexDirection: "column", alignSelf: "center", margin: 10, marginLeft: 20, }}>
                         <Image
                             source={require("../images/dirticon.png")}
                             style={thumbnailStyle}
@@ -73,7 +73,7 @@ class Dashboard extends Component {
                 );
             });
             rows.push((
-                <View style={{flex: 1, flexDirection: "row", alignSelf: "center"}}>
+                <View style={{flex: 1, flexDirection: "row", alignSelf: "center", marginBottom: 20}}>
                 {cropRow}
                 </View>
             ));
