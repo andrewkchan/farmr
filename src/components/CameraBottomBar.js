@@ -69,12 +69,6 @@ class CameraBottomBar extends Component {
         return (
             <View style={containerStyle}>
                 <TouchableOpacity
-                    style={snapsButtonWrapperStyle}
-                    onPress={this.openSnaps}
-                >
-                    <View style={snapsButtonContainerStyle} />
-                </TouchableOpacity>
-                <TouchableOpacity
                     style={{flex: 1}}
                     onPress={this.captureImage}
                 >
