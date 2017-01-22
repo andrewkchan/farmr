@@ -89,8 +89,8 @@ const styles = StyleSheet.create({
     },
     preview: {
         flex: 1,
-        height: Dimensions.get("window").height,
-        width: Dimensions.get("window").width
+        height: 1024,
+        width: 1024
     },
     capture: {
         flex: 0,
