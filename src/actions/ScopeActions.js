@@ -48,7 +48,7 @@ export function fetchDiagnosisSuggestions() {
             type: 'image/jpeg',
             name: 'photo.jpg',
         };
-        const UPLOAD_URL = "10.101.53.84:5000";
+        const UPLOAD_URL = "10.101.53.84:5000/hello.py";
         const body = new FormData()
         body.append('file', photo)
         
