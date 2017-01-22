@@ -85,6 +85,7 @@ public class TensorFlowImageClassifier implements Classifier {
       String outputName)
       throws IOException {
     TensorFlowImageClassifier c = new TensorFlowImageClassifier();
+    return c;
     c.inputName = inputName;
     c.outputName = outputName;
 
@@ -101,23 +102,23 @@ public class TensorFlowImageClassifier implements Classifier {
     br.close();
     Log.i(TAG, "Read " + c.labels.size() + ", " + numClasses + " specified");
 
-    // c.inputSize = inputSize;
-    // c.imageMean = imageMean;
-    // c.imageStd = imageStd;
+    c.inputSize = inputSize;
+    c.imageMean = imageMean;
+    c.imageStd = imageStd;
 
-    // // Pre-allocate buffers.
-    // c.outputNames = new String[] {outputName};
-    // c.intValues = new int[inputSize * inputSize];
-    // c.floatValues = new float[inputSize * inputSize * 3];
-    // c.outputs = new float[numClasses];
+    // Pre-allocate buffers.
+    c.outputNames = new String[] {outputName};
+    c.intValues = new int[inputSize * inputSize];
+    c.floatValues = new float[inputSize * inputSize * 3];
+    c.outputs = new float[numClasses];
 
-    // c.inferenceInterface = new TensorFlowInferenceInterface();
+    c.inferenceInterface = new TensorFlowInferenceInterface();
 
-    // final int status = c.inferenceInterface.initializeTensorFlow(assetManager, modelFilename);
-    // if (status != 0) {
-    //   Log.e(TAG, "TF init status: " + status);
-    //   throw new RuntimeException("TF init status (" + status + ") != 0");
-    // }
+    final int status = c.inferenceInterface.initializeTensorFlow(assetManager, modelFilename);
+    if (status != 0) {
+      Log.e(TAG, "TF init status: " + status);
+      throw new RuntimeException("TF init status (" + status + ") != 0");
+    }
     return c;
   }
 
