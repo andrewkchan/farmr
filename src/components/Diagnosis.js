@@ -49,7 +49,7 @@ class Diagnosis extends Component {
     render() {
         if (this.props.scope.diagnosisComplete == false){
             return(
-                <Image source={{uri: 'http://www.urltogif/image.gif'}} />
+                <Image source={{uri: '../images/default.gif'}} />
                 );
         }
         else {
