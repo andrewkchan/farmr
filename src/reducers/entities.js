@@ -1,7 +1,7 @@
 import * as types from "../constants/ActionTypes";
 
 const initialState = {
-    crops: null //hashmap of crop entities indexed by ID
+    crops: {} //hashmap of crop entities indexed by ID
 };
 
 export default function entities(state = initialState, action) {
