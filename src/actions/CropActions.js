@@ -8,7 +8,7 @@ action addCrop
 Adds a new crop to the set of extant crops while creating a new unique ID for it.
 Also sets the current crop to the newly added crop.
 */
-export default function addCrop(crop) {
+export function addCrop(crop) {
     return (dispatch, getState) => {
         const { entities } = getState();
         const { crops } = entities;
