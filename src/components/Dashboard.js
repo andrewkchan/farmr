@@ -12,13 +12,13 @@ const imageStyle = {
     width: 100,
     height: 100,
     marginBottom: 350,
-    alignSelf: "center"
+    flexDirection: 'row'
 };
 
 const thumbnailStyle = {
     width: 30,
     height: 30,
-    alignSelf: "center"
+    flexDirection: 'row'
 };
 
 class Dashboard extends Component {
