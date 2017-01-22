@@ -1,9 +1,18 @@
 import React, { Component, PropTypes } from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, StyleSheet } from "react-native";
 
 const propTypes = {
     navigator: PropTypes.object.isRequired
 };
+
+var styles = StyleSheet.create({
+    resizeMode: {
+    width: 90,
+    height: 60,
+    borderWidth: 0.5,
+    borderColor: 'black'
+  }
+});
 
 const viewStyle = {
     flex: 1,
@@ -38,9 +47,9 @@ class Splash extends Component {
             >
                 <Image
                     source={require("../images/splash.png")}
-                    resizeMode={Image.resizeMode.contain}
-                    style={imageStyle}
-                    resizeMode="contain"
+                    style={styles.resizeMode}
+                    resizeMode={Image.resizeMode.center}
+                    
                 />
             </View>
         );
