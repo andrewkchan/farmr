@@ -49,10 +49,10 @@ class CropProfile extends Component {
                 </Text>
                  <TouchableOpacity onPress={this.onButtonPress}>
                         <Icon
-                            name = "toggle-left"
+                            name = "arrow-circle-left"
                             size={50}
                             style = {{alignSelf:'center'}}
-                            color="blue"
+                            color="#499E9C"
                         />
                 </TouchableOpacity>
             </View>
