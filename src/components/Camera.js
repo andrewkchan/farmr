@@ -49,6 +49,7 @@ class CameraWrapper extends Component {
 
     handleButtonPress() {
         const { dispatch } = this.props;
+        console.log(this.camera);
         this.camera.capture()
             .then((data) => {
                 console.log("recv data from camera");
