@@ -3,16 +3,31 @@ export default cropTypes = {
         name: "Apple",
         conditions: {
             APPLE_SCAB: {
-                name: "Apple Scab"
+                name: "Apple Scab",
+                suggestion: `Rake under trees and destroy 
+                infected leaves to reduce the number of fungal 
+                spores available to start the disease cycle over again next spring.
+                Water in the evening or early morning hours (avoid overhead irrigation) 
+                to give the leaves time to dry out before infection can occur.
+                Spread a 3- to 6-inch layer of compost under trees, keeping it away from the trunk, 
+                to cover soil and prevent splash dispersal of the fungal spores.
+                `
             },
             BLACK_ROT: {
                 name: "Black Rot"
+                suggestion: 'Remove any infected parts of the plant/fruits. 
+                These are sources of bacteria that may infect the rest of the plant'
             },
             CEDAR_APPLE_RUST: {
-                name: "Cedar Apple Rust"
+                name: "Cedar Apple Rust",
+                suggestion: `Keep all the fallen debris and dead fruit cleaned up and away from the tree.
+                During the winter, check for red cankers and remove them by cutting them out or pruning away the affected limbs at least six inches beyond the wound. 
+                Destroy all infected tissue immediately and keep a watchful eye out for new signs of infection. 
+                `
             },
             HEALTHY: {
-                name: "Healthy"
+                name: "Healthy",
+                suggestion: 'Your apple is healthy!'
             }
         }
     },
@@ -20,7 +35,8 @@ export default cropTypes = {
         name: "Blueberry",
         conditions: {
             HEALTHY: {
-                name: "Healthy"
+                name: "Healthy",
+                suggestion: 'Your blueberry is healthy!'
             }
         }
     },
@@ -29,6 +45,7 @@ export default cropTypes = {
         conditions: {
             POWDERY_MILDEW: {
                 name: "Powdery Mildew"
+                suggestion:
             },
             HEALTHY: {
                 name: "Healthy"

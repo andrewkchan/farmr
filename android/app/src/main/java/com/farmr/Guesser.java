@@ -7,11 +7,11 @@ import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 
 public class Guesser{
-    public static final String MODEL_FILE = "",
-                            LABEL_FILE = "",
+    public static final String MODEL_FILE = "file:///android_asset/retrained_graph.pb",
+                            LABEL_FILE = "file:///android_asset/retrained_labels.pb",
                             INPUT_NAME = "input:0",
                             OUTPUT_NAME = "output:0";
-    private static final int NUM_CLASSES = 1001;
+    private static final int NUM_CLASSES = 38; //1001;
     private static final int INPUT_SIZE = 224;
     private static final int IMAGE_MEAN = 117;
     private static final float IMAGE_STD = 1;
