@@ -13,5 +13,10 @@ export const SAMPLE_CROPSET = {
         name: "Nitin",
         species: "Onion plant",
         health: 6
+    },
+    4: {
+        name: "Tejas",
+        species: "Apple plant",
+        health: 30
     }
 }

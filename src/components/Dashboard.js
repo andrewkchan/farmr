@@ -8,7 +8,7 @@ const propTypes = {
     dispatch: PropTypes.func.isRequired
 };
 
-const imageStyle = {
+const defaultStyle = {
     width: 100,
     height: 100,
     marginBottom: 350,
@@ -38,7 +38,7 @@ class Dashboard extends Component {
         const { croplist, entities } = this.props;
         const { cropIds } = croplist;
         const { crops } = entities;
-        if (0 === 0) {
+        if (cropIds.length === 0) {
             return (
                 <View>
                 <View style={{alignSelf: "center", margin: 15}}>
@@ -48,7 +48,7 @@ class Dashboard extends Component {
                 </View>
                 <Image
                     source={require("../images/dirticon.png")}
-                    style={imageStyle}
+                    style={defaultStyle}
                     resizeMode="contain"
                 />
                 </View>
@@ -56,7 +56,7 @@ class Dashboard extends Component {
         }
         return cropIds.map((cropId) => {
             return (
-                <View style={{flex: 1, flexDirection: "row", alignSelf: "center", margin: 15}}>
+                <View style={{flex: 1, flexDirection: "row", alignSelf: "center", margin: 10}}>
                     <Image
                         source={require("../images/dirticon.png")}
                         style={thumbnailStyle}
