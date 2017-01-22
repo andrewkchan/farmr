@@ -2,6 +2,7 @@ package com.farmr;
 
 import org.tensorflow.demo.Classifier;
 import org.tensorflow.demo.TensorFlowImageClassifier;
+import java.util.List;
 
 public class Guesser{
     public static final String MODEL_FILE = "",
@@ -28,6 +29,18 @@ public class Guesser{
         return singleton;
     }
     
-    public static result 
+    public static void init(AssetManager manager){
+        getClassifier(manager);
+    } 
+    
+    public static List<Classifier.Recognition> guessPlant(Bitmap img, AssetManager mgr){
+       Classifier c = getClassifier(mgr);
+       return c == null : null ? c.recognizeImage(img);
+    }
+    
+    public static List<Classifier.Recognition> guessPlant(Bitmap img){
+        return guessPlant(img,null);
+        
+    }
     
 }

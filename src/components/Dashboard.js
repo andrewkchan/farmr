@@ -73,7 +73,7 @@ class Dashboard extends Component {
                 );
             });
             rows.push((
-                <View style={{flex: 1, flexDirection: "row"}}>
+                <View style={{flex: 1, flexDirection: "row", alignSelf: "center"}}>
                 {cropRow}
                 </View>
             ));
