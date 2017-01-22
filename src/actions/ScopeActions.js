@@ -26,7 +26,7 @@ export function setCapturedImage(image) {
 export function processCapturedImage(image) {
     return (dispatch, getState) => {
         //do native tensorflow stuff...
-        testGuesser();
+        dispatch(fetchDiagnosisSuggestions(image));
     };
 }
 
@@ -39,11 +39,9 @@ async function testGuesser() {
     }
 }
 
-export function fetchDiagnosisSuggestions() {
+export function fetchDiagnosisSuggestions(capturedImage) {
     return (dispatch, getState) => {
         console.log("FECHING STUFFFFFFFFFFFFFFFFFFFFFFFFFF");
-        const { scope } = getState();
-        const { capturedImage } = scope;
         const photo = {
             uri: capturedImage.uri,
             type: 'image/jpeg',
