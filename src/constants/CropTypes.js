@@ -7,11 +7,22 @@ export default cropTypes = {
             },
             BLACK_ROT: {
                 name: "Black Rot"
+            },
+            CEDAR_APPLE_RUST: {
+                name: "Cedar Apple Rust"
+            },
+            HEALTHY: {
+                name: "Healthy"
             }
         }
     },
     BLUEBERRY: {
-        name: "Blueberry"
+        name: "Blueberry",
+        conditions: {
+            HEALTHY: {
+                name: "Healthy"
+            }
+        }
     },
     CHERRY: {
         name: "Cherry"
