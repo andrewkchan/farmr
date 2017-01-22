@@ -13,5 +13,8 @@ public class MainActivity extends ReactActivity {
         return "farmr";
     }
     
-    
+    @Override
+    public void onCreate (Bundle savedInstanceState){
+        Guesser.init(getAssets());
+    }
 }
