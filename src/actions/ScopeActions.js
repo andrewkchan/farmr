@@ -8,6 +8,8 @@ export function capture() {
 
 export function receiveCapturedImage(image) {
     return (dispatch) => {
+        console.log("receiving image");
+        console.log(image);
         dispatch(processCapturedImage(image));
         dispatch(setCapturedImage(image));
     };
