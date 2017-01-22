@@ -38,8 +38,10 @@ export function updateCrop(cropId, crop) {
 
 export function fetchCropSet() {
     return (dispatch) => {
-        dispatch(receiveCropSet(SAMPLE_CROPSET));
-        dispatch(loadCropListFromSet());
+        dispatch(receiveCropSet(SAMPLE_CROPSET))
+            .then(() => {
+                dispatch(loadCropListFromSet());
+            });
     }
 }
 
