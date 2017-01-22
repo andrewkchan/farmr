@@ -55,13 +55,12 @@ export function fetchDiagnosisSuggestions(capturedImage) {
           method: 'POST',
           body
         }).then((res) => {
+            console.log("response rewceived!!!!" + res);
             return res.json();
         }).then((json) => {
             const { plantClass } = json;
             console.log("CLASSIFIED PLANT CLASS:" + plantClass);
             dispatch(receiveDiagnosisSuggestions(plantClass));
-        }).reject((err) => {
-            console.log(err);
         });
        
         //fetch diagnosis either from sqlite DB or internet
