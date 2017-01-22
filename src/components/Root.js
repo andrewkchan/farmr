@@ -6,6 +6,7 @@ import Diagnosis from "../components/Diagnosis";
 import Camera from "../components/Camera";
 import Picture from "../components/Picture";
 import Analyze from "../components/Analyze";
+import CropProfile from "../components/CropProfile";
 
 // import Discover from "../components/Discover";
 //import AddMe from "../components/AddMe";
@@ -50,28 +51,6 @@ class Root extends Component {
                         { ...this.props }
                     />
                 );
-                /*
-                return (
-                    <Chats
-                        navigator={navigator}
-                        { ...route.passProps }
-                        { ...this.props }
-                    />
-                );
-                */
-
-            case "addMe":
-                return (
-                    <Dashboard
-                        navigator={navigator}
-                        { ...this.props }
-                    />
-                );
-                /*
-                return (
-                    <AddMe navigator={navigator} />
-                );
-                */
             
             case "camera":
                 return (
@@ -88,37 +67,6 @@ class Root extends Component {
                         { ...this.props }
                     />
                 );
-
-            case "discover":
-                return (
-                    <Discover navigator={navigator} />
-                );
-
-            case "stories":
-                return (
-                    <Dashboard
-                        navigator={navigator}
-                        { ...this.props }
-                    />
-                );
-                /*
-                return (
-                    <Stories navigator={navigator} />
-                );
-                */
-
-            case "snaps":
-                return (
-                    <Dashboard
-                        navigator={navigator}
-                        { ...this.props }
-                    />
-                );
-                /*
-                return (
-                    <Snaps navigator={navigator} />
-                );
-                */
 
             case "splash":
                 return (
@@ -145,6 +93,14 @@ class Root extends Component {
                 );
             
             default:
+                if (routeId.slice(0, 4) === "crop") {
+                    const { entities } = this.props;
+                    const { crops } = entities;
+                    const crop = crops[routeId.slice(4, routeId.length)];
+                    return (
+                        <CropProfile crop={crop} />
+                    );
+                }
                 return null;
         }
     }

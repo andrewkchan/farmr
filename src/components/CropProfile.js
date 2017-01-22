@@ -6,21 +6,35 @@ const propTypes = {
     crop: PropTypes.object.isRequired
 };
 
+const profilePic = {
+    width: 100,
+    height: 100,
+    alignSelf: "center"
+};
+
 class CropProfile extends Component {
     render() {
         const { crop } = this.props;
         
         return (
-            <View>
+            <View style={{flex: 1, flexDirection: "column"}}>
                 <Image
                     source={require("../images/splash_screen.png")}
-                    style={imageSplash}
+                    style={profilePic}
                     resizeMode="contain"
                 />
                 <Text>
-                
+                { crop.name }
+                </Text>
+                <Text>
+                { crop.species.name }
+                </Text>
+                <Text>
+                { crop.condition.name }
                 </Text>
             </View>
         );
     }
 }
+
+export default CropProfile;

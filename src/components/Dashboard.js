@@ -33,6 +33,13 @@ class Dashboard extends Component {
             id: "camera"
         });
     }
+    goToCrop(cropId) {
+        const { navigator } = this.props;
+        console.log("go to crops");
+        navigator.replace({
+            id: `crop${cropId}`
+        });
+    }
     
     renderCrops() {
         const { croplist, entities } = this.props;
@@ -60,7 +67,17 @@ class Dashboard extends Component {
         for (let i = 0; i < cropIds.length; i += MAX_ITEMS_PER_ROW) {
             const cropRow = cropIds.slice(i, i + MAX_ITEMS_PER_ROW).map((cropId) => {
                 return (
-                    <TouchableOpacity style={{flex: 1, flexDirection: "column", alignSelf: "center", margin: 10, marginLeft: 40, }}>
+                    <TouchableOpacity 
+                    style={{
+                    flex: 1, 
+                    flexDirection: "column", 
+                    alignSelf: "center", 
+                    margin: 10, 
+                    marginLeft: 40, }}
+                    
+                    onPress={this.goToCrop.bind(this, cropId)}
+                    >
+
                         <Image
                             source={require("../images/dirticon.png")}
                             style={thumbnailStyle}
