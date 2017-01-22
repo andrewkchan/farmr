@@ -29,8 +29,12 @@ class Dashboard extends Component {
     }
     
     renderCrops() {
-        const { croplist } = this.props;
-        
+        const { croplist, crops } = this.props;
+        const { cropIds } = croplist;
+        const { crops } = crops;
+        cropIds.forEach((cropId) => {
+            
+        });
     }
     
     render() {

@@ -3,8 +3,8 @@ import { Provider } from "react-redux";
 import configureStore from "../store/configureStore";
 import RootContainer from "../containers/RootContainer";
 
-import fetchCropSet from "../actions/CropActions";
-import loadCropListFromSet from "../actions/CropListActions";
+import {fetchCropSet} from "../actions/CropActions";
+import {loadCropListFromSet} from "../actions/CropListActions";
 
 const store = configureStore(undefined);
 
