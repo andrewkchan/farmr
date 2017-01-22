@@ -14,7 +14,7 @@ import IconI from "react-native-vector-icons/Ionicons";
 import CameraBottomBar from "../components/CameraBottomBar";
 import CameraTopBar from "../components/CameraTopBar";
 
-import {capture, receiveCapturedImage} from "../actions/index";
+import {capture, receiveCapturedImage} from "../actions/ScopeActions";
 
 const defaultButtonStyle = {
     margin: 15,
