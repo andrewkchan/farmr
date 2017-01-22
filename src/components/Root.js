@@ -5,7 +5,7 @@ import Dashboard from "../components/Dashboard";
 import Diagnosis from "../components/Diagnosis";
 import Camera from "../components/Camera";
 import Picture from "../components/Picture";
-import Diagnosis from "../components/Diagnosis";
+
 // import Discover from "../components/Discover";
 //import AddMe from "../components/AddMe";
 // import Chats from "../components/Chats";
