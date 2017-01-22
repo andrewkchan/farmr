@@ -61,6 +61,7 @@ class Diagnosis extends Component {
                     </Text>
                     <Text style = {{marginTop: 20, textAlign: 'center', color: 'black', fontSize: 40}}>
                         Recommendations:
+                        {this.scope.suggestions}
                     </Text>
                     
                     <TouchableOpacity>
