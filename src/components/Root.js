@@ -107,7 +107,7 @@ class Root extends Component {
 
     render() {
         return (
-            <View style={{ flex: 1}}>
+            <View style={{ flex: 1, backgroundColor: "#47cacc"}}>
                 <Navigator
                     style={{ flex: 1}}
                     initialRoute={{ id: "splash", name: "splash"}}

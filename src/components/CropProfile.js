@@ -51,7 +51,7 @@ class CropProfile extends Component {
                         <Icon
                             name = "arrow-circle-left"
                             size={50}
-                            style = {{alignSelf:'flex-start', marginLeft:20, marginTop: 300}}
+                            style = {{alignSelf:'flex-start', marginLeft:20, marginTop: 200}}
                             color="#499E9C"
                         />
                 </TouchableOpacity>
@@ -59,7 +59,7 @@ class CropProfile extends Component {
                      <Icon
                             name = "camera"
                             size={50}
-                            style = {{alignSelf:'flex-start',marginLeft: 290, marginTop: 300 }}
+                            style = {{alignSelf:'flex-start',marginLeft: 200, marginTop: 200 }}
                             color="gray"
                         />
                 </TouchableOpacity>
