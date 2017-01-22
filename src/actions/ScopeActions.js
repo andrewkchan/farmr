@@ -40,18 +40,38 @@ async function testGuesser() {
 }
 
 export function fetchDiagnosisSuggestions() {
-    return (dispatch) => {
-        //fetch('')
+    return (dispatch, getState) => {
+        const { scope } = getState();
+        const { capturedImage } = scope;
+        const photo = {
+            uri: capturedImage.uri,
+            type: 'image/jpeg',
+            name: 'photo.jpg',
+        };
+        const UPLOAD_URL = "google.com";
+        const body = new FormData()
+        body.append('file', photo)
+        
+        fetch(UPLOAD_URL, {
+          method: 'POST',
+          body
+        }).then((res) => {
+            return res.json();
+        }).then((json) => {
+            const { plantClass } = json;
+            console.log("CLASSIFIED PLANT CLASS:" + plantClass);
+            dispatch(receiveDiagnosisSuggestions(plantClass));
+        });
        
         //fetch diagnosis either from sqlite DB or internet
         //get promise.then((suggestions) => { dispatch(receiveDiagnosisSuggestions(suggestions)); });
     };
 }
 
-export function receiveDiagnosisSuggestions(suggestions) {
+export function receiveDiagnosisSuggestions(suggestionsStr) {
     return {
         type: types.RECEIVE_DIAGNOSIS_SUGGESTIONS,
-        suggestions
+        suggestionsStr
     };
 }
 
