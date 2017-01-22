@@ -23,40 +23,24 @@ const styles = StyleSheet.create({
 });
 
 class PictureBottom extends Component {
+    constructor(props) {
+        super(props);
+        this.onButtonPress = this.onButtonPress.bind(this);
+
+    }
     captureImage() {
         const { dispatch } = this.props;
         dispatch(capture());
     }
-
+    onButtonPress(){
+         const { navigator } = this.props;
+        navigator.replace({
+        id: "diagnosis"
+        });
+    }
     render() {
         return (
             <View style={styles.container}>
-                <View style={{flexDirection: "row"}}>
-                    <TouchableHighlight>
-                        <IconI
-                            name="timer-3"
-                            style={styles.button}
-                            size={30}
-                            color="#fff"
-                        />
-                    </TouchableHighlight>
-                    <TouchableHighlight>
-                        <IconI
-                            name="get-app"
-                            style={styles.button}
-                            size={30}
-                            color="#fff"
-                        />
-                    </TouchableHighlight>
-                    <TouchableHighlight>
-                        <IconI
-                            name="playlist-add"
-                            style={styles.button}
-                            size={30}
-                            color="#fff"
-                        />
-                    </TouchableHighlight>
-                </View>
                 <View style={{flexDirection: "row"}}>
                 <TouchableHighlight>
                     <IconI
@@ -64,6 +48,7 @@ class PictureBottom extends Component {
                         style={styles.button}
                         size={30}
                         color="#fff"
+                        onPress={this.onButtonPress}
                     />
                 </TouchableHighlight>
                 </View>
