@@ -17,3 +17,10 @@ export function loadCropListFromSet() {
         dispatch(receiveCropList(cropIds));
     }
 }
+
+export function receiveCropList(cropIds) {
+    return {
+        type: types.RECEIVE_CROPLIST,
+        cropIds
+    };
+}

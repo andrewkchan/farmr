@@ -17,6 +17,7 @@ class Picture extends Component {
     render() {
         const {scope} = this.props;
         let imageSource  = scope.capturedImage;
+        console.log(imageSource);
         imageSource = imageSource ? imageSource : require("../images/capturedImg.png");
         return (
             <Image
