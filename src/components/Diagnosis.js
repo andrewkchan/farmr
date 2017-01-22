@@ -58,7 +58,7 @@ class Diagnosis extends Component {
                         Recommendations:
                     </Text>
                     
-                    <TouchableOpacity style={{marginTop: 200}}>
+                    <TouchableOpacity style={{marginTop: 50}}>
                         <Icon
                             name = "arrow-circle-right"
                             size={50}
