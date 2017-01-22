@@ -84,8 +84,8 @@ public class TensorFlowImageClassifier implements Classifier {
       String inputName,
       String outputName)
       throws IOException {
-    TensorFlowImageClassifier c = new TensorFlowImageClassifier();
-    return c;
+    //TensorFlowImageClassifier c = new TensorFlowImageClassifier();
+    return null;
     /*
     c.inputName = inputName;
     c.outputName = outputName;
