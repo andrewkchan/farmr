@@ -5,7 +5,6 @@ export function loadCropListFromSet() {
         const { entities } = getState();
         const { crops } = entities;
         const cropIds = Object.keys(crops);
-        console.log(cropIds);
         cropIds.sort((a, b) => {
             if (a.name < b.name) {
                 return -1;
