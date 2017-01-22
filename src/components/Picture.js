@@ -15,7 +15,7 @@ const imageStyle = {
 
 class Picture extends Component {
     render() {
-        let { imageSource } = this.scope.captureImage;
+        let { imageSource } = this.scope.capturedImage;
         imageSource = imageSource ? imageSource : require("../images/capturedImg.png");
         return (
             <Image
