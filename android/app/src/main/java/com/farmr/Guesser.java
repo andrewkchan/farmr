@@ -13,7 +13,7 @@ public class Guesser{
     private static final int IMAGE_MEAN = 117;
     private static final float IMAGE_STD = 1;
     
-    private static Classifier singleton; 
+    private Classifier singleton; 
     
     
     static{
