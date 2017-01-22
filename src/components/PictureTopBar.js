@@ -3,8 +3,6 @@ import { View, TouchableOpacity, Text, Image, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import IconI from "react-native-vector-icons/MaterialIcons";
 
-import { close } from "../actions/index";
-
 const styles = StyleSheet.create({
     container: {
         flexDirection:'row',

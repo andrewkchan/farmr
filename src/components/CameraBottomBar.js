@@ -3,9 +3,6 @@ import { View, TouchableOpacity, Text, Image } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import IconI from "react-native-vector-icons/Ionicons";
 
-
-import { capture } from "../actions/index";
-
 const propTypes = {
     dispatch: PropTypes.func.isRequired
 };

@@ -3,8 +3,6 @@ import { View, TouchableHighlight, Text, Image, StyleSheet } from "react-native"
 import Icon from "react-native-vector-icons/FontAwesome";
 import IconI from "react-native-vector-icons/MaterialIcons";
 
-import { capture } from "../actions/index";
-
 const propTypes = {
     dispatch: PropTypes.func.isRequired
 };
@@ -27,10 +25,6 @@ class PictureBottom extends Component {
         super(props);
         this.onButtonPress = this.onButtonPress.bind(this);
 
-    }
-    captureImage() {
-        const { dispatch } = this.props;
-        dispatch(capture());
     }
     onButtonPress(){
          const { navigator } = this.props;
