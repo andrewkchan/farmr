@@ -9,6 +9,14 @@ export function capture() {
 export function receiveCapturedImage(image) {
     return (dispatch) => {
         dispatch(processCapturedImage(image));
+        dispatch(setCapturedImage(image));
+    };
+}
+
+export function setCapturedImage(image) {
+    return {
+        type: types.SET_CAPTURED_IMAGE,
+        image
     };
 }
 

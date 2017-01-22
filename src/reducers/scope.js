@@ -10,7 +10,7 @@ const initialState = {
 
 export default function scope(state = initialState, action) {
     switch (action.type) {
-        case types.RECEIVE_CAPTURED_IMAGE:
+        case types.SET_CAPTURED_IMAGE:
             return { ...state, capturedImage: action.image };
         case types.RECEIVE_DIAGNOSIS_SUGGESTIONS:
             return { ...state, suggestions: action.suggestions };
