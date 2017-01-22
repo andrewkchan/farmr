@@ -17,7 +17,7 @@ const defaultStyle = {
 
 const thumbnailStyle = {
     width: 30,
-    height: 10,
+    height: 30,
     //flexDirection: 'row'
 };
 
