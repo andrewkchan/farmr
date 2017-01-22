@@ -38,7 +38,7 @@ class Diagnosis extends Component {
     render() {
         return (
                 <View style={containerStyle}>
-                    <Text style = {{marginTop: 20, textAlign: 'center', color: '#A9A9A9', fontSize: 15}}>
+                    <Text style = {{marginTop: 20, textAlign: 'center', color: 'black', fontSize: 30}}>
                         Diseases:
                     </Text>
                     
