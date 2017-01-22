@@ -16,9 +16,7 @@ import com.android.build.OutputFile
  *   bundleAssetName: "index.android.bundle",
  *
  *   // the entry file for bundle generation
- *   entryFile: "index.android.js",
- *
- *   // whether to bundle JS and assets in debug mode
+ *   entryFile: "index.android.js", * *   // whether to bundle JS and assets in debug mode
  *   bundleInDebug: false,
  *
  *   // whether to bundle JS and assets in release mode
@@ -134,7 +132,7 @@ dependencies {
 }
 
 task copyNativeLibs(type: Copy) {
-	from(new File(project(':main').buildDir, 'native-libs')) { include '**/*.so' }
+	from(new File(project(':app').buildDir, 'native-libs')) { include '**/*.so' }
 	into new File(buildDir, 'native-libs')
 }
 
