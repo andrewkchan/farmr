@@ -47,7 +47,7 @@ export function fetchDiagnosisSuggestions(capturedImage) {
             type: 'image/jpeg',
             name: 'photo.jpg',
         };
-        const UPLOAD_URL = "107.170.241.119:8080";
+        const UPLOAD_URL = "http://107.170.241.119:8080";
         const body = new FormData()
         body.append('file', photo)
         
@@ -60,6 +60,8 @@ export function fetchDiagnosisSuggestions(capturedImage) {
             const { plantClass } = json;
             console.log("CLASSIFIED PLANT CLASS:" + plantClass);
             dispatch(receiveDiagnosisSuggestions(plantClass));
+        }).reject((err) => {
+            console.log(err);
         });
        
         //fetch diagnosis either from sqlite DB or internet
