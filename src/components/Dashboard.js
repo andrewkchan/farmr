@@ -4,7 +4,7 @@ import { View, Text, Button, Image, TouchableOpacity } from "react-native";
 import Camera from "../components/Camera";
 import Picture from "../components/Picture";
 
-import addCrop from "../actions/CropActions";
+import { addCrop } from "../actions/CropActions";
 
 const propTypes = {
     dispatch: PropTypes.func.isRequired
@@ -30,7 +30,8 @@ class Dashboard extends Component {
     }
     
     goToCamera() {
-         const { navigator } = this.props;
+        const { navigator } = this.props;
+        dispatch(addCrop({ name: "placeholder crop" }));
         navigator.replace({
             id: "camera"
         });
