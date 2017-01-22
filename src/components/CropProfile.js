@@ -14,6 +14,18 @@ const profilePic = {
 };
 
 class CropProfile extends Component {
+    constructor(props){
+        super(props);
+        this.onButtonPress = this.onButtonPress.bind(this);
+    }
+    
+    onButtonPress(){
+          const { navigator } = this.props;
+        navigator.replace({
+            id: "dashboard"
+        });
+    }
+    
     render() {
         const { crop } = this.props;
         
@@ -24,15 +36,24 @@ class CropProfile extends Component {
                     style={profilePic}
                     resizeMode="contain"
                 />
-                <Text>
+                <Text style={{alignSelf: "center"}}>
                 { crop.name }
                 </Text>
-                <Text>
+                <Text style={{alignSelf: "center"}}>
                 { crop.species.name }
                 </Text>
-                <Text>
+                <Text style={{alignSelf: "center"}}>
                 { crop.condition.name }
                 </Text>
+                 <TouchableOpacity>
+                        <Icon
+                            name = "times"
+                            size={50}
+                            onPress ={this.onButtonPress}
+                            style = {styles.button}
+                            color="#BA4F4F"
+                        />
+                </TouchableOpacity>
             </View>
         );
     }
