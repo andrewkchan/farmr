@@ -231,7 +231,9 @@ export default cropTypes = {
         name: "Tomato",
         conditions: {
             BACTERIAL_SPOT: {
-                name: "Bacterial spot"
+                name: "Bacterial spot",
+                 suggestion: `Practicing a crop rotation will go a long way in preventing the spread of powdery mildew.
+                Destroy any diseased plant debris. Sulfur and “Stylet” oil are effective products for powdery mildew control.`
             },
             EARLY_BLIGHT: {
                 name: "Early blight"
