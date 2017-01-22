@@ -32,3 +32,10 @@ export default function fetchCropSet() {
         dispatch(receiveCropSet(SAMPLE_CROPSET));
     }
 }
+
+export default function receiveCropSet(crops) {
+    return {
+        type: types.RECEIVE_CROPSET,
+        crops
+    };
+}

@@ -10,6 +10,8 @@ export const EXAMINE_CROP = "EXAMINE_CROP";
 
 export const ADD_CROP = "ADD_CROP";
 export const UPDATE_CROP = "UPDATE_CROP";
+export const FETCH_CROPSET = "FETCH_CROPSET";
+export const RECEIVE_CROPSET = "RECEIVE_CROPSET";
 
 export const FETCH_CROPLIST = "FETCH_CROPLIST";
 export const RECEIVE_CROPLIST = "RECEIVE_CROPLIST";
