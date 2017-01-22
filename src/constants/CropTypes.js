@@ -25,7 +25,15 @@ export default cropTypes = {
         }
     },
     CHERRY: {
-        name: "Cherry"
+        name: "Cherry",
+        conditions: {
+            POWDERY_MILDEW: {
+                name: "Powdery Mildew"
+            },
+            HEALTHY: {
+                name: "Healthy"
+            }
+        }
     },
     CORN: {
         name: "Corn"
