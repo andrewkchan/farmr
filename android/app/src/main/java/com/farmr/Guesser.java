@@ -17,6 +17,14 @@ public class Guesser{
     
     
     static{
+        MODEL_FILE = "";
+        LABEL_FILE = "";
+        INPUT_NAME = "";
+        OUTPUT_NAME = "";
+        NUM_CLASSES = 1001;
+        INPUT_SIZE = 224;
+        IMAGE_MEAN = 117;
+        IMAGE_STD = 1;
         try {
             singleton = TensorFlowImageClassifier.create(null,MODEL_FILE,LABEL_FILE,NUM_CLASSES,INPUT_SIZE,IMAGE_MEAN,IMAGE_STD,INPUT_NAME,OUTPUT_NAME);
         } catch (final Exception e) {
