@@ -116,6 +116,14 @@ class Root extends Component {
                     />
                 );
             
+            case "picture":
+                return (
+                    <Picture
+                        navigator={navigator}
+                        { ...this.props }
+                    />
+                );
+            
             default:
                 return null;
         }

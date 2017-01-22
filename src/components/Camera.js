@@ -46,6 +46,7 @@ class CameraWrapper extends Component {
         this.handleButtonPress = this.handleButtonPress.bind(this);
     }
 
+
     handleButtonPress() {
         const { dispatch } = this.props;
         this.camera.capture()
@@ -57,6 +58,10 @@ class CameraWrapper extends Component {
             .catch(err => { console.error(err); });
         this.setState({
             captureStyle: pressedButtonStyle
+        });
+        const { navigator } = this.props;
+        navigator.replace({
+            id: "picture"
         });
     }
 
