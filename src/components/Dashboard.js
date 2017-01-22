@@ -30,7 +30,7 @@ class Dashboard extends Component {
     }
     
     goToCamera() {
-        const { navigator } = this.props;
+        const { dispatch, navigator } = this.props;
         dispatch(addCrop({ name: "placeholder crop" }));
         navigator.replace({
             id: "camera"
