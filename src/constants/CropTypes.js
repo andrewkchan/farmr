@@ -1,6 +1,11 @@
 export default cropTypes = {
     APPLE: {
-        name: "Apple"
+        name: "Apple",
+        conditions: {
+            APPLE_SCAB: {
+                name: "Apple Scab"
+            }
+        }
     },
     BLUEBERRY: {
         name: "Blueberry"
