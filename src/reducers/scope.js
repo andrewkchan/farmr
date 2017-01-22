@@ -10,6 +10,8 @@ const initialState = {
 
 export default function scope(state = initialState, action) {
     switch (action.type) {
+        case types.EXAMINE_CROP:
+            return { ...state, cropId: action.cropId };
         case types.SET_CAPTURED_IMAGE:
             return { ...state, capturedImage: action.image };
         case types.RECEIVE_DIAGNOSIS_SUGGESTIONS:
