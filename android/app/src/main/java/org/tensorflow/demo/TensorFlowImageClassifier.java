@@ -86,6 +86,7 @@ public class TensorFlowImageClassifier implements Classifier {
       throws IOException {
     TensorFlowImageClassifier c = new TensorFlowImageClassifier();
     return c;
+    /*
     c.inputName = inputName;
     c.outputName = outputName;
 
@@ -120,6 +121,7 @@ public class TensorFlowImageClassifier implements Classifier {
       throw new RuntimeException("TF init status (" + status + ") != 0");
     }
     return c;
+    */
   }
 
   @Override
