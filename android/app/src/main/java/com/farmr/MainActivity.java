@@ -15,7 +15,7 @@ public class MainActivity extends ReactActivity {
     }
     
     @Override
-    public void onCreate (Bundle savedInstanceState){
+    protected void onCreate (Bundle savedInstanceState){
      //   Guesser.init(getAssets());
     }
 }
