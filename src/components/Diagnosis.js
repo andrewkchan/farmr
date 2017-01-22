@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
         justifyContent:'space-between'
     },
     button: {
-        margin: 20,
+        marginTop: 20,
         marginLeft: 0,
         alignSelf: 'center',
     }
@@ -35,8 +35,6 @@ class Diagnosis extends Component {
     }
     onButtonPress(){
         const { dispatch, navigator, scope } = this.props;
-        console.log("abababababaa");
-        console.log(addCrop);
         dispatch(addCrop({
             name: "NEW CROP",
             species: cropTypes.POTATO,
@@ -58,7 +56,7 @@ class Diagnosis extends Component {
                         Recommendations:
                     </Text>
                     
-                    <TouchableOpacity style={{marginTop: 50}}>
+                    <TouchableOpacity>
                         <Icon
                             name = "arrow-circle-right"
                             size={50}
