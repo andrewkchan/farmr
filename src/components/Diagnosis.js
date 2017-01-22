@@ -35,6 +35,8 @@ class Diagnosis extends Component {
     }
     onButtonPress(){
         const { dispatch, navigator, scope } = this.props;
+        console.log("abababababaa");
+        console.log(addCrop);
         dispatch(addCrop({
             name: "NEW CROP",
             species: cropTypes.POTATO,
